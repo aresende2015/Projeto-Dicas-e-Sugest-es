@@ -1,0 +1,334 @@
+{
+  "id":"10040"
+ ,"Identification":{
+    "Name":"Configurar Controle de Acesso"
+   ,"Alias":"CONFIGURAR-CONTROLE-DE-ACESSO"
+   ,"Title":"Configurar Controle de Acesso"
+   ,"Page Group":"Administra\u00E7\u00E3o (67705047617390022628)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Modal Dialog"
+   ,"Dialog Template":"Theme Default"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"Dialog":{
+    "Chained":true
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"Do not focus cursor"
+   ,"Warn on Unsaved Changes":true
+  }
+ ,"Security":{
+    "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
+   ,"Authentication":"Page Requires Authentication"
+   ,"Deep Linking":"Application Default"
+   ,"Page Access Protection":"No Arguments Supported"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Help":{
+    "Help Text":"\u003Cp\u003ESelecione a op\u00E7\u00E3o apropriada para quaisquer usu\u00E1rios autenticados.\u003Cbr\u003E\nSelecionar \u003Cstrong\u003EN\u00E3o\u003C\/strong\u003E torna o aplicativo mais seguro, pois somente os usu\u00E1rios especificados podem acessar o aplicativo.\nPor\u00E9m, se seu aplicativo tiver uma comunidade de usu\u00E1rios maior, ent\u00E3o manter os usu\u00E1rios pode implicar em gastos e talvez voc\u00EA prefira escolher \u003Cstrong\u003ESim\u003C\/strong\u003E e s\u00F3 inserir Administradores do aplicativo e, possivelmente, Colaboradores.\u003Cbr\u003E\nSe voc\u00EA selecionar \u003Cstrong\u003ESim\u003C\/strong\u003E, ent\u00E3o tamb\u00E9m dever\u00E1 selecionar quantos usu\u00E1rios n\u00E3o inclu\u00EDdos na lista de usu\u00E1rios ser\u00E3o tratados.\u003C\/p\u003E\n\u003Cp\u003ESelecione entre endere\u00E7os de e-mail necess\u00E1rios e qualquer valor alfanum\u00E9rico para Nomes de usu\u00E1rios.\u003Cbr\u003E\nGeralmente, voc\u00EA deve estabelecer esta defini\u00E7\u00E3o como \u003Cstrong\u003EEndere\u00E7o de E-mail\u003C\/strong\u003E se seu aplicativo usar (ou for configurado para usar) um esquema de autentica\u00E7\u00E3o centralizado, como Oracle Access Manager ou SSO.\u003C\/p\u003E\n\u003Cp\u003E\u003Cem\u003E\u003Cstrong\u003EObserva\u00E7\u00E3o:\u003C\/strong\u003E Este aplicativo suporta os seguintes 3 n\u00EDveis de acesso: Leitor, Colaborador e Administrador.\n\u003Cul\u003E\n  \u003Cli\u003E\u003Cstrong\u003ELeitores\u003C\/strong\u003E t\u00EAm acesso somente para leitura a todas as informa\u00E7\u00F5es e tamb\u00E9m podem exibir relat\u00F3rios.\u003C\/li\u003E\n  \u003Cli\u003E\u003Cstrong\u003EColaboradores\u003C\/strong\u003E podem criar, editar e excluir informa\u00E7\u00F5es e exibir relat\u00F3rios.\u003C\/li\u003E\n  \u003Cli\u003E\u003Cstrong\u003EAdministradores\u003C\/strong\u003E al\u00E9m do recurso de Colaboradores, tamb\u00E9m podem executar a configura\u00E7\u00E3o do aplicativo, acessando a se\u00E7\u00E3o Administra\u00E7\u00E3o do aplicativo.\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/em\u003E\u003C\/p\u003E"
+  }
+ ,"Configuration":{
+    "Build Option":"Recurso: Controle de Acesso (67705043211207022580)"
+  }
+ ,"Regions":[
+    {
+      "id":"67705152350744023607"
+     ,"Identification":{
+        "Title":"Configura\u00E7\u00E3o do Controle de Acesso"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Blank with Attributes (67704877201885022490)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+   ,{
+      "id":"67705152465237023607"
+     ,"Identification":{
+        "Title":"Bot\u00F5es"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"REGION_POSITION_03"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Buttons Container (67704880073492022492)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67705155623500023610"
+     ,"Identification":{
+        "Name":"P10040_ALLOW_OTHER_USERS"
+       ,"Type":"Alternar"
+      }
+     ,"Label":{
+        "Label":"Qualquer usu\u00E1rio autenticado pode acessar este aplicativo"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Usar Padr\u00F5es":true
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Configura\u00E7\u00E3o do Controle de Acesso (67705152350744023607)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"3"
+      }
+     ,"Appearance":{
+        "Template":"Optional (67705013438306022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":true
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Function Body"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Function Body":"if apex_app_setting.get_value( p_name =\u003E \u0027ACCESS_CONTROL_SCOPE\u0027 ) = \u0027ACL_ONLY\u0027 then\n    return \u0027N\u0027;\nelse\n    return \u0027Y\u0027;\nend if;"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+     ,"Help":{
+        "Inline Help Text":"Escolha \u003Cstrong\u003EN\u00E3o\u003C\/strong\u003E se todos os usu\u00E1rios forem definidos na lista de controle de acesso. Escolha \u003Cstrong\u003ESim\u003C\/strong\u003E se os usu\u00E1rios autenticados que n\u00E3o estiverem na lista de controle de acesso tamb\u00E9m puderem usar este aplicativo."
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67705153682119023608"
+     ,"Identification":{
+        "Button Name":"APPLY_CHANGES"
+       ,"Label":"Aplicar Altera\u00E7\u00F5es"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Bot\u00F5es (67705152465237023607)"
+       ,"Position":"CREATE"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+   ,{
+      "id":"67705153941604023609"
+     ,"Identification":{
+        "Button Name":"CANCEL"
+       ,"Label":"Cancelar"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Bot\u00F5es (67705152465237023607)"
+       ,"Position":"PREVIOUS"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Defined by Dynamic Action"
+       ,"Execute Validations":false
+      }
+    }
+  ]
+ ,"Dynamic Actions":[
+    {
+      "id":"67705154073560023609"
+     ,"Identification":{
+        "Name":"Cancelar Caixa de Di\u00E1logo"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.BROWSER.CLICK"
+       ,"Selection Type":"Button"
+       ,"Button":"CANCEL (67705153941604023609)"
+      }
+     ,"Execution":{
+        "Event Scope":"Static"
+       ,"Type":"Immediate"
+      }
+     ,"Actions":[
+        {
+          "id":"67705154749771023609"
+         ,"Identification":{
+            "Action":"Cancelar Caixa de Di\u00E1logo"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Cancelar Caixa de Di\u00E1logo (67705154073560023609)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+        }
+      ]
+    }
+  ]
+ ,"Processes":[
+    {
+      "id":"67705156041829023610"
+     ,"Identification":{
+        "Name":"Definir Controle de Acesso"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"begin\n    if :P10040_ALLOW_OTHER_USERS = \u0027Y\u0027 then\n        apex_app_setting.set_value (\n            p_name  =\u003E \u0027ACCESS_CONTROL_SCOPE\u0027,\n            p_value =\u003E \u0027ALL_USERS\u0027);\n    else\n        apex_app_setting.set_value (\n            p_name  =\u003E \u0027ACCESS_CONTROL_SCOPE\u0027,\n            p_value =\u003E \u0027ACL_ONLY\u0027);\n    end if;\nend;"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Success Message":{
+        "Success Message":"Defini\u00E7\u00F5es de Controle de Acesso salvas."
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+  ]
+ ,"Branches":[
+    {
+      "id":"67705155325394023609"
+     ,"Identification":{
+        "Name":"Ramificar para P\u00E1gina Admin"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"After Processing"
+      }
+     ,"Behavior":{
+        "Type":"Page or URL (Redirect)"
+       ,"Target":{
+          "url":"f?p=\u0026APP_ID.:10000:\u0026APP_SESSION.::\u0026DEBUG.:::\u0026success_msg=#SUCCESS_MSG#"
+         ,"Page":"10000"
+        }
+      }
+    }
+  ]
+}

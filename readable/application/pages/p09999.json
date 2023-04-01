@@ -1,0 +1,526 @@
+{
+  "id":"9999"
+ ,"Identification":{
+    "Name":"P\u00E1gina de Log-in"
+   ,"Alias":"LOGIN"
+   ,"Title":"Assuntos e dicas - Log-In"
+   ,"Page Group":"Login (67706746284689092430)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Normal"
+   ,"Page Template":"Login (67704851916719022473)"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"First item on page"
+   ,"Warn on Unsaved Changes":false
+  }
+ ,"Security":{
+    "Authentication":"Page Is Public"
+  }
+ ,"Advanced":{
+    "Enable Meta Tags":false
+  }
+ ,"Security":{
+    "Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Regions":[
+    {
+      "id":"67705048219732022633"
+     ,"Identification":{
+        "Title":"Assuntos e dicas"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Login (67704938010960022520)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Image":{
+        "File URL":"#APP_FILES#icons\/app-icon-512.png"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67705048732808022634"
+     ,"Identification":{
+        "Name":"P9999_USERNAME"
+       ,"Type":"Campo de Texto"
+      }
+     ,"Label":{
+        "Label":"Nome do Usu\u00E1rio"
+       ,"Alignment":"Right"
+      }
+     ,"Settings":{
+        "Subtipo":"Text"
+       ,"Remover Espa\u00E7os":"None"
+       ,"Formata\u00E7\u00E3o de Mai\u00FAsculas\/Min\u00FAsculas do Texto":"SEM ALTERA\u00C7\u00C3O"
+       ,"Submeter ao pressionar Enter":false
+       ,"Desativado":false
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Assuntos e dicas (67705048219732022633)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Hidden (67705013336490022559)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Icon":"fa-user"
+       ,"Width":40
+       ,"Value Placeholder":"Nome do Usu\u00E1rio"
+      }
+     ,"Validation":{
+        "Value Required":false
+       ,"Maximum Length":100
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67705049192335022635"
+     ,"Identification":{
+        "Name":"P9999_PASSWORD"
+       ,"Type":"Senha"
+      }
+     ,"Label":{
+        "Label":"Senha"
+       ,"Alignment":"Right"
+      }
+     ,"Settings":{
+        "Submeter ao pressionar Enter":true
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Assuntos e dicas (67705048219732022633)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Hidden (67705013336490022559)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Icon":"fa-key"
+       ,"Width":40
+       ,"Value Placeholder":"Senha"
+      }
+     ,"Validation":{
+        "Value Required":false
+       ,"Maximum Length":100
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67705049592479022635"
+     ,"Identification":{
+        "Name":"P9999_REMEMBER"
+       ,"Type":"Caixa de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Lembrar nome do usu\u00E1rio"
+       ,"Alignment":"Right"
+      }
+     ,"Settings":{
+        "Usar Padr\u00F5es":true
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Assuntos e dicas (67705048219732022633)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Hidden (67705013336490022559)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Server-side Condition":{
+        "Type":"Expression"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Expression":"apex_authentication.persistent_cookies_enabled and not apex_authentication.persistent_auth_enabled"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67705049969167022635"
+     ,"Identification":{
+        "Name":"P9999_PERSISTENT_AUTH"
+       ,"Type":"Caixa de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Lembrar"
+       ,"Alignment":"Right"
+      }
+     ,"Settings":{
+        "Usar Padr\u00F5es":true
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Assuntos e dicas (67705048219732022633)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Hidden (67705013336490022559)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Server-side Condition":{
+        "Type":"Expression"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Expression":"apex_authentication.persistent_auth_enabled"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67705050343014022636"
+     ,"Identification":{
+        "Button Name":"LOGIN"
+       ,"Label":"Acessar"
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Assuntos e dicas (67705048219732022633)"
+       ,"Position":"NEXT"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+  ]
+ ,"Processes":[
+    {
+      "id":"67705050611758022636"
+     ,"Identification":{
+        "Name":"Login"
+       ,"Type":"Chamar API"
+      }
+     ,"Settings":{
+        "Tipo":"PL\/SQL Package"
+       ,"Propriet\u00E1rio":"ESQUEMA DE PARSING"
+       ,"Pacote":"APEX_AUTHENTICATION"
+       ,"Procedimento ou Fun\u00E7\u00E3o":"LOGIN"
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+     ,"Parameters":[
+        {
+          "id":"67705051176456022637"
+         ,"Identification":{
+            "Name":"p_username"
+          }
+         ,"Parameter":{
+            "Direction":"In"
+           ,"Data Type":"VARCHAR2"
+           ,"Has Default":false
+          }
+         ,"Value":{
+            "Type":"Item"
+           ,"Item":"P9999_USERNAME"
+          }
+         ,"Advanced":{
+            "Display Sequence":1
+          }
+        }
+       ,{
+          "id":"67705051620367022637"
+         ,"Identification":{
+            "Name":"p_password"
+          }
+         ,"Parameter":{
+            "Direction":"In"
+           ,"Data Type":"VARCHAR2"
+           ,"Has Default":false
+          }
+         ,"Value":{
+            "Type":"Item"
+           ,"Item":"P9999_PASSWORD"
+          }
+         ,"Advanced":{
+            "Display Sequence":2
+          }
+        }
+       ,{
+          "id":"67705052153392022637"
+         ,"Identification":{
+            "Name":"p_set_persistent_auth"
+          }
+         ,"Parameter":{
+            "Direction":"In"
+           ,"Data Type":"BOOLEAN"
+           ,"Has Default":true
+          }
+         ,"Value":{
+            "Type":"Item"
+           ,"Item":"P9999_PERSISTENT_AUTH"
+          }
+         ,"Advanced":{
+            "Display Sequence":3
+          }
+        }
+      ]
+    }
+   ,{
+      "id":"67705052590313022638"
+     ,"Identification":{
+        "Name":"Definir Cookie de Nome do Usu\u00E1rio"
+       ,"Type":"Chamar API"
+      }
+     ,"Settings":{
+        "Tipo":"PL\/SQL Package"
+       ,"Propriet\u00E1rio":"ESQUEMA DE PARSING"
+       ,"Pacote":"APEX_AUTHENTICATION"
+       ,"Procedimento ou Fun\u00E7\u00E3o":"SEND_LOGIN_USERNAME_COOKIE"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+     ,"Parameters":[
+        {
+          "id":"67705053081754022638"
+         ,"Identification":{
+            "Name":"p_username"
+          }
+         ,"Parameter":{
+            "Direction":"In"
+           ,"Data Type":"VARCHAR2"
+           ,"Has Default":false
+          }
+         ,"Value":{
+            "Type":"Expression"
+           ,"Language":"PL\/SQL"
+           ,"PL\/SQL Expression":"lower( :P9999_USERNAME )"
+          }
+         ,"Advanced":{
+            "Display Sequence":1
+          }
+        }
+       ,{
+          "id":"67705053592091022638"
+         ,"Identification":{
+            "Name":"p_consent"
+          }
+         ,"Parameter":{
+            "Direction":"In"
+           ,"Data Type":"BOOLEAN"
+           ,"Has Default":false
+          }
+         ,"Value":{
+            "Type":"Item"
+           ,"Item":"P9999_REMEMBER"
+          }
+         ,"Advanced":{
+            "Display Sequence":2
+          }
+        }
+      ]
+    }
+   ,{
+      "id":"67705054017021022638"
+     ,"Identification":{
+        "Name":"Obter Cookie de Nome do Usu\u00E1rio"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":":P9999_USERNAME := apex_authentication.get_login_username_cookie;\n:P9999_REMEMBER := case when :P9999_USERNAME is not null then \u0027Y\u0027 end;"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"Before Header"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+    }
+   ,{
+      "id":"67705054454663022639"
+     ,"Identification":{
+        "Name":"Limpar Cache de P\u00E1gina(s)"
+       ,"Type":"Limpar Estado da Sess\u00E3o"
+      }
+     ,"Settings":{
+        "Tipo":"Clear all Items on the Current Page"
+      }
+     ,"Execution":{
+        "Sequence":30
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+  ]
+}

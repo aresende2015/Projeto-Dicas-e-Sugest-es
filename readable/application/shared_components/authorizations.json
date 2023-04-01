@@ -1,0 +1,58 @@
+[
+  {
+    "id":"67705046189535022626"
+   ,"Identification":{
+      "Name":"Direitos de Administra\u00E7\u00E3o"
+    }
+   ,"Authorization Scheme":{
+      "Type":"Est\u00E1 na Atribui\u00E7\u00E3o ou Grupo"
+    }
+   ,"Settings":{
+      "Tipo":"Application Role"
+     ,"Nome(s)":"Administrador"
+    }
+   ,"Server Cache":{
+      "Evaluation Point":"Once per Page View"
+    }
+   ,"Error":{
+      "Error Message":"Privil\u00E9gios insuficientes; o usu\u00E1rio n\u00E3o \u00E9 um Administrador"
+    }
+  }
+ ,{
+    "id":"67705046243333022626"
+   ,"Identification":{
+      "Name":"Direitos do Leitor"
+    }
+   ,"Authorization Scheme":{
+      "Type":"Fun\u00E7\u00E3o PL\/SQL que Retorna Booleano"
+    }
+   ,"Settings":{
+      "Corpo da Fun\u00E7\u00E3o PL\/SQL":"if nvl(apex_app_setting.get_value(\n   p_name =\u003E \u0027ACCESS_CONTROL_SCOPE\u0027),\u0027x\u0027) = \u0027ALL_USERS\u0027 then\n    -- allow user not in the ACL to access the application\n    return true;\nelse\n    -- require user to have at least one role\n    return apex_acl.has_user_any_roles (\n        p_application_id =\u003E :APP_ID, \n        p_user_name      =\u003E :APP_USER);\nend if;"
+    }
+   ,"Server Cache":{
+      "Evaluation Point":"Once per Session"
+    }
+   ,"Error":{
+      "Error Message":"Voc\u00EA n\u00E3o est\u00E1 autorizado a exibir este aplicativo porque n\u00E3o recebeu acesso ou sua conta foi bloqueada. Entre em contato com o administrador do aplicativo."
+    }
+  }
+ ,{
+    "id":"67705046358280022626"
+   ,"Identification":{
+      "Name":"Direitos de Contribui\u00E7\u00E3o"
+    }
+   ,"Authorization Scheme":{
+      "Type":"Est\u00E1 na Atribui\u00E7\u00E3o ou Grupo"
+    }
+   ,"Settings":{
+      "Tipo":"Application Role"
+     ,"Nome(s)":"Administrador,Colaborador"
+    }
+   ,"Server Cache":{
+      "Evaluation Point":"Once per Page View"
+    }
+   ,"Error":{
+      "Error Message":"Privil\u00E9gios insuficientes; o usu\u00E1rio n\u00E3o \u00E9 um Colaborador"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id":"67705045746588022625"
+   ,"Identification":{
+      "Name":"Administrador"
+    }
+   ,"Advanced":{
+      "Static ID":"ADMINISTRATOR"
+    }
+   ,"Description":{
+      "Description":"Atribui\u00E7\u00E3o designada a administradores de aplicativos."
+    }
+  }
+ ,{
+    "id":"67705045955550022625"
+   ,"Identification":{
+      "Name":"Colaborador"
+    }
+   ,"Advanced":{
+      "Static ID":"CONTRIBUTOR"
+    }
+   ,"Description":{
+      "Description":"Atribui\u00E7\u00E3o designada a colaboradores de aplicativos."
+    }
+  }
+ ,{
+    "id":"67705046094335022625"
+   ,"Identification":{
+      "Name":"Leitor"
+    }
+   ,"Advanced":{
+      "Static ID":"READER"
+    }
+   ,"Description":{
+      "Description":"Atribui\u00E7\u00E3o designada a leitores de aplicativos."
+    }
+  }
+]

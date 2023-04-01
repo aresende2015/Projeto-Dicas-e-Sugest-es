@@ -1,0 +1,20 @@
+[
+  {
+    "id":"67704840254183022465"
+   ,"Identification":{
+      "Name":"Contas do Oracle APEX"
+    }
+   ,"Settings":{
+      "Type":"Contas do Oracle APEX"
+    }
+   ,"Session Not Valid":{
+      "Redirect to":"Login Page"
+    }
+   ,"Login Processing":{
+      "Switch in Session":false
+    }
+   ,"Real Application Security":{
+      "RAS Mode":"Disabled"
+    }
+  }
+]

@@ -1,0 +1,588 @@
+{
+  "id":"10042"
+ ,"Identification":{
+    "Name":"Gerenciar Acesso do Usu\u00E1rio"
+   ,"Alias":"USER_ACCESS"
+   ,"Title":"Gerenciar Acesso do Usu\u00E1rio"
+   ,"Page Group":"Administra\u00E7\u00E3o (67705047617390022628)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Modal Dialog"
+   ,"Dialog Template":"Theme Default"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"Dialog":{
+    "Chained":false
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"First item on page"
+   ,"Warn on Unsaved Changes":true
+  }
+ ,"Security":{
+    "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
+   ,"Authentication":"Page Requires Authentication"
+   ,"Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Help":{
+    "Help Text":"\u003Cp\u003EUse este form para inserir usu\u00E1rios, seus endere\u00E7os de e-mail e definir seu n\u00EDvel de acesso.\nAs defini\u00E7\u00F5es estabelecidas em \u003Cem\u003EConfigurar Controle de Acesso\u003C\/em\u003E determinar\u00E3o se o nome de usu\u00E1rio deve ser o endere\u00E7o de e-mail ou se pode ser qualquer entrada alfanum\u00E9rica.\u003C\/p\u003E\n\u003Cp\u003EEste aplicativo suporta os seguintes 3 n\u00EDveis de acesso: Leitor, Colaborador e Administrador.\u003C\/p\u003E\n\u003Cul\u003E\n  \u003Cli\u003E\u003Cstrong\u003ELeitores\u003C\/strong\u003E t\u00EAm acesso somente para leitura a todas as informa\u00E7\u00F5es e tamb\u00E9m podem exibir relat\u00F3rios.\u003C\/li\u003E\n  \u003Cli\u003E\u003Cstrong\u003EColaboradores\u003C\/strong\u003E podem criar, editar e excluir informa\u00E7\u00F5es e exibir relat\u00F3rios.\u003C\/li\u003E\n  \u003Cli\u003E\u003Cstrong\u003EAdministradores\u003C\/strong\u003E, al\u00E9m do recurso de Colaboradores, tamb\u00E9m podem executar configura\u00E7\u00E3o do aplicativo, acessando a se\u00E7\u00E3o Administra\u00E7\u00E3o do aplicativo.\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003Cp\u003EAo editar um usu\u00E1rio existente, voc\u00EA pode bloquear sua conta, o que impedir\u00E1 que ele acesse o aplicativo.\u003C\/p\u003E\n\u003Cp\u003E\u003Cem\u003E\u003Cstrong\u003EObserva\u00E7\u00E3o:\u003C\/strong\u003E Se voc\u00EA usar as contas do Oracle APEX, ent\u00E3o os usu\u00E1rios inseridos aqui tamb\u00E9m devem ser definidos como usu\u00E1rios finais por um Administrador do Espa\u00E7o de Trabalho que tamb\u00E9m pode definir as senhas dos usu\u00E1rios.\u003C\/em\u003E\u003C\/p\u003E"
+  }
+ ,"Configuration":{
+    "Build Option":"Recurso: Controle de Acesso (67705043211207022580)"
+  }
+ ,"Regions":[
+    {
+      "id":"67705162856531023618"
+     ,"Identification":{
+        "Title":"Form em Gerenciar Acesso do Usu\u00E1rio"
+       ,"Type":"Form"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Type":"Table \/ View"
+       ,"Table Owner":"Parsing Schema"
+       ,"Table Name":"APEX_APPL_ACL_USERS"
+       ,"Include ROWID Column":false
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Blank with Attributes (67704877201885022490)"
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"t-Form--stretchInputs"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Edit":{
+          "Enabled":true
+         ,"Allowed Operations":[
+            "Add Row"
+           ,"Update Row"
+           ,"Delete Row"
+          ]
+         ,"Lost Update Type":"Row Values"
+        }
+      }
+    }
+   ,{
+      "id":"67705162974151023618"
+     ,"Identification":{
+        "Title":"Bot\u00F5es"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"REGION_POSITION_03"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Buttons Container (67704880073492022492)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67705166481699023621"
+     ,"Identification":{
+        "Name":"P10042_ID"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Column":"ID"
+       ,"Data Type":"NUMBER"
+       ,"Query Only":false
+       ,"Primary Key":true
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Checksum Required - Session Level"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67705166806587023621"
+     ,"Identification":{
+        "Name":"P10042_APPLICATION_ID"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Column":"APPLICATION_ID"
+       ,"Data Type":"NUMBER"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Default":{
+        "Type":"Static"
+       ,"Static Value":"\u0026APP_ID."
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Checksum Required - Session Level"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67705167296627023621"
+     ,"Identification":{
+        "Name":"P10042_USER_NAME"
+       ,"Type":"Campo de Texto"
+      }
+     ,"Label":{
+        "Label":"Nome do Usu\u00E1rio"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Subtipo":"Text"
+       ,"Remover Espa\u00E7os":"Leading and Trailing"
+       ,"Formata\u00E7\u00E3o de Mai\u00FAsculas\/Min\u00FAsculas do Texto":"SEM ALTERA\u00C7\u00C3O"
+       ,"Submeter ao pressionar Enter":false
+       ,"Desativado":false
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Required - Floating (67705014904991022560)"
+       ,"Width":60
+      }
+     ,"Validation":{
+        "Value Required":true
+       ,"Maximum Length":255
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Column":"USER_NAME"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Read Only":{
+        "Type":"Item is NOT NULL"
+       ,"Item":"P10042_ID"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67705167602051023622"
+     ,"Identification":{
+        "Name":"P10042_ROLE_IDS"
+       ,"Type":"Grupo da Caixa de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Atribui\u00E7\u00F5es"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "N\u00FAmero de Colunas":1
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Required - Floating (67705014904991022560)"
+      }
+     ,"Validation":{
+        "Value Required":true
+      }
+     ,"List of Values":{
+        "Type":"Shared Component"
+       ,"List of Values":"ACCESS_ROLES (67705167718509023622)"
+       ,"Display Extra Values":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+       ,"Column":"ROLE_IDS"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Escape special characters":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+     ,"Help":{
+        "Help Text":"\u003Cp\u003EQuando o Controle de Acesso \u00E9 ativado, os Administradores t\u00EAm a capacidade de restringir o acesso a determinadas funcionalidades do aplicativo para usu\u00E1rios autenticados. Este aplicativo suporta os seguintes 3 n\u00EDveis de acesso: Leitor, Colaborador e Administrador.\u003Cp\u003E\n\u003Cul\u003E\n  \u003Cli\u003E\u003Cstrong\u003ELeitores\u003C\/strong\u003E t\u00EAm acesso somente para leitura a todas as informa\u00E7\u00F5es e tamb\u00E9m podem exibir relat\u00F3rios.\u003C\/li\u003E\n  \u003Cli\u003E\u003Cstrong\u003EColaboradores\u003C\/strong\u003E podem criar, editar e excluir informa\u00E7\u00F5es e exibir relat\u00F3rios.\u003C\/li\u003E\n  \u003Cli\u003E\u003Cstrong\u003EAdministradores\u003C\/strong\u003E,al\u00E9m da capacidade de Colaboradores, tamb\u00E9m podem executar a configura\u00E7\u00E3o do aplicativo.\u003C\/li\u003E\n\u003C\/ul\u003E"
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67705163931299023619"
+     ,"Identification":{
+        "Button Name":"CANCEL"
+       ,"Label":"Cancelar"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Bot\u00F5es (67705162974151023618)"
+       ,"Position":"PREVIOUS"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Defined by Dynamic Action"
+       ,"Execute Validations":false
+      }
+    }
+   ,{
+      "id":"67705165317424023620"
+     ,"Identification":{
+        "Button Name":"DELETE"
+       ,"Label":"Excluir"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Bot\u00F5es (67705162974151023618)"
+       ,"Position":"PREVIOUS"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"t-Button--danger"
+         ,"t-Button--simple"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":false
+       ,"Warn on Unsaved Changes":"Do Not Check"
+       ,"Database Action":"SQL DELETE action"
+      }
+     ,"Confirmation":{
+        "Message":"\u0026APP_TEXT$DELETE_MSG!RAW."
+       ,"Style":"Danger"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item is NOT NULL"
+       ,"Item":"P10042_ID"
+      }
+    }
+   ,{
+      "id":"67705165720816023620"
+     ,"Identification":{
+        "Button Name":"SAVE"
+       ,"Label":"Aplicar Altera\u00E7\u00F5es"
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Bot\u00F5es (67705162974151023618)"
+       ,"Position":"NEXT"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+       ,"Database Action":"SQL UPDATE action"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item is NOT NULL"
+       ,"Item":"P10042_ID"
+      }
+    }
+   ,{
+      "id":"67705166137100023621"
+     ,"Identification":{
+        "Button Name":"CREATE"
+       ,"Label":"Adicionar Usu\u00E1rio"
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Bot\u00F5es (67705162974151023618)"
+       ,"Position":"NEXT"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+       ,"Database Action":"SQL INSERT action"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item is NULL"
+       ,"Item":"P10042_ID"
+      }
+    }
+  ]
+ ,"Dynamic Actions":[
+    {
+      "id":"67705164099998023619"
+     ,"Identification":{
+        "Name":"Cancelar Caixa de Di\u00E1logo"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.BROWSER.CLICK"
+       ,"Selection Type":"Button"
+       ,"Button":"CANCEL (67705163931299023619)"
+      }
+     ,"Execution":{
+        "Event Scope":"Static"
+       ,"Type":"Immediate"
+      }
+     ,"Actions":[
+        {
+          "id":"67705164781592023620"
+         ,"Identification":{
+            "Action":"Cancelar Caixa de Di\u00E1logo"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Cancelar Caixa de Di\u00E1logo (67705164099998023619)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+        }
+      ]
+    }
+  ]
+ ,"Validations":[
+    {
+      "id":"67705168968478023626"
+     ,"Identification":{
+        "Name":"N\u00E3o \u00E9 poss\u00EDvel remover a si pr\u00F3prio da fun\u00E7\u00E3o de administrador"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"Validation":{
+        "Type":"Function Body (returning Boolean)"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Function Body":"if :P10042_USER_NAME = :APP_USER and\n    apex_acl.is_role_removed_from_user (\n        p_application_id =\u003E :APP_ID,\n        p_user_name      =\u003E :APP_USER,\n        p_role_static_id =\u003E \u0027ADMINISTRATOR\u0027,\n        p_role_ids       =\u003E apex_string.split_numbers(\n                                p_str =\u003E case when :REQUEST = \u0027DELETE\u0027 then\n                                             null\n                                         else\n                                             :P10042_ROLE_IDS\n                                         end,\n                                p_sep =\u003E \u0027:\u0027) ) then\n    return false;\nelse\n    return true;\nend if;"
+       ,"Always Execute":false
+      }
+     ,"Error":{
+        "Error Message":"Voc\u00EA n\u00E3o pode remover de si mesmo a atribui\u00E7\u00E3o de administrador."
+       ,"Display Location":"Inline in Notification"
+      }
+    }
+  ]
+ ,"Processes":[
+    {
+      "id":"67705169244887023626"
+     ,"Identification":{
+        "Name":"Inicializar o form Gerenciar Acesso do Usu\u00E1rio"
+       ,"Type":"Form - Inicializa\u00E7\u00E3o"
+       ,"Form Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"After Header"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+    }
+   ,{
+      "id":"67705169666336023627"
+     ,"Identification":{
+        "Name":"Processar o form Gerenciar Acesso do Usu\u00E1rio"
+       ,"Type":"Form - Processamento Autom\u00E1tico de Linhas (DML)"
+       ,"Form Region":"Form em Gerenciar Acesso do Usu\u00E1rio (67705162856531023618)"
+      }
+     ,"Settings":{
+        "Tipo de Alvo":"Region Source"
+       ,"Impedir Perda de Atualiza\u00E7\u00F5es":true
+       ,"Bloquear Linha":"No"
+       ,"Retornar Chave(s) Prim\u00E1ria(s) ap\u00F3s Inser\u00E7\u00E3o":false
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+   ,{
+      "id":"67705170041260023627"
+     ,"Identification":{
+        "Name":"Fechar Caixa de Di\u00E1logo"
+       ,"Type":"Fechar Caixa de Di\u00E1logo"
+      }
+     ,"Execution":{
+        "Sequence":40
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+  ]
+}

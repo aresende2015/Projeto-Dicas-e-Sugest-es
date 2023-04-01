@@ -1,0 +1,432 @@
+{
+  "id":"10020"
+ ,"Identification":{
+    "Name":"Apar\u00EAncia do Aplicativo"
+   ,"Alias":"APAR\u00CANCIA-DO-APLICATIVO"
+   ,"Title":"Apar\u00EAncia do Aplicativo"
+   ,"Page Group":"Administra\u00E7\u00E3o (67705047617390022628)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Modal Dialog"
+   ,"Dialog Template":"Theme Default"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"Dialog":{
+    "Chained":true
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"Do not focus cursor"
+   ,"Warn on Unsaved Changes":true
+  }
+ ,"Security":{
+    "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
+   ,"Authentication":"Page Requires Authentication"
+   ,"Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Help":{
+    "Help Text":"\u003Cp\u003ESelecione o esquema de cor padr\u00E3o usado para exibir o aplicativo.\u003C\/p\u003E\n\u003Cp\u003ESe a op\u00E7\u00E3o \u003Cstrong\u003EPermitir Que os Usu\u00E1rios Finais escolham o Estilo do Tema\u003C\/strong\u003E estiver marcada, ent\u00E3o cada usu\u00E1rio final pode selecionar os estilos de tema dispon\u00EDveis, clicando no link \u003Cem\u003EPersonalizar\u003C\/em\u003E no canto inferior esquerdo da Home page.\u003C\/p\u003E"
+  }
+ ,"Configuration":{
+    "Build Option":"Recurso: Sele\u00E7\u00E3o de Estilo do Tema (67705044022766022580)"
+  }
+ ,"Regions":[
+    {
+      "id":"67705065378018022698"
+     ,"Identification":{
+        "Title":"Bot\u00F5es"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"REGION_POSITION_03"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Buttons Container (67704880073492022492)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+   ,{
+      "id":"67705065498659022698"
+     ,"Identification":{
+        "Title":"Configurar Apar\u00EAncia"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Blank with Attributes (67704877201885022490)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Below Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67705068586608022701"
+     ,"Identification":{
+        "Name":"P10020_DESKTOP_THEME_STYLE_ID"
+       ,"Type":"Lista de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Estilo do Tema do Desktop"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "A\u00E7\u00E3o da P\u00E1gina na Sele\u00E7\u00E3o":"None"
+       ,"Permitir Sele\u00E7\u00E3o M\u00FAltipla":false
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Configurar Apar\u00EAncia (67705065498659022698)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"3"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Height":1
+      }
+     ,"Validation":{
+        "Value Required":true
+      }
+     ,"List of Values":{
+        "Type":"Shared Component"
+       ,"List of Values":"DESKTOP THEME STYLES (67705068683315022701)"
+       ,"Display Extra Values":false
+       ,"Display Null Value":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"SQL Query (return single value)"
+       ,"SQL Query":"select s.theme_style_id\nfrom apex_application_theme_styles s,\n    apex_application_themes t\nwhere s.application_id = t.application_id\n    and s.theme_number = t.theme_number\n    and s.application_id = :app_id\n    and s.is_current = \u0027Yes\u0027"
+       ,"Used":"Always, replacing any existing value in session state"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Server-side Condition":{
+        "Type":"Rows returned"
+       ,"SQL Query":"select null\n  from apex_application_theme_styles s,\n       apex_application_themes t\n where s.application_id = t.application_id\n   and s.theme_number   = t.theme_number\n   and s.application_id = :app_id"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"Blocklist HTML command characters (\u003C\u003E\")"
+      }
+     ,"Help":{
+        "Inline Help Text":"O Estilo do Tema padr\u00E3o \u00E9 aplicado a todos os usu\u00E1rios."
+      }
+    }
+   ,{
+      "id":"67705069255073022704"
+     ,"Identification":{
+        "Name":"P10020_END_USER_STYLE"
+       ,"Type":"Grupo da Caixa de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Prefer\u00EAncia de Tema do Usu\u00E1rio Final"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "N\u00FAmero de Colunas":1
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Configurar Apar\u00EAncia (67705065498659022698)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"0"
+      }
+     ,"Appearance":{
+        "Template":"Hidden (67705013336490022559)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":false
+      }
+     ,"List of Values":{
+        "Type":"Shared Component"
+       ,"List of Values":"USER_THEME_PREFERENCE (67705069393582022704)"
+       ,"Display Extra Values":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"SQL Query (return single value)"
+       ,"SQL Query":"select a.theme_style_by_user_pref\n  from apex_applications a\n where a.application_id  = :app_id"
+       ,"Used":"Always, replacing any existing value in session state"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Escape special characters":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+     ,"Help":{
+        "Inline Help Text":"Se essa op\u00E7\u00E3o for marcada, os usu\u00E1rios finais poder\u00E3o escolher seu pr\u00F3prio Estilo do Tema usando o link Personalizar."
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67705066474585022699"
+     ,"Identification":{
+        "Button Name":"CANCEL"
+       ,"Label":"Cancelar"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Bot\u00F5es (67705065378018022698)"
+       ,"Position":"PREVIOUS"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Defined by Dynamic Action"
+       ,"Execute Validations":false
+      }
+    }
+   ,{
+      "id":"67705067878885022700"
+     ,"Identification":{
+        "Button Name":"SAVE"
+       ,"Label":"Aplicar Altera\u00E7\u00F5es"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Bot\u00F5es (67705065378018022698)"
+       ,"Position":"NEXT"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+  ]
+ ,"Dynamic Actions":[
+    {
+      "id":"67705066524786022699"
+     ,"Identification":{
+        "Name":"Cancelar Caixa de Di\u00E1logo"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.BROWSER.CLICK"
+       ,"Selection Type":"Button"
+       ,"Button":"CANCEL (67705066474585022699)"
+      }
+     ,"Execution":{
+        "Event Scope":"Static"
+       ,"Type":"Immediate"
+      }
+     ,"Actions":[
+        {
+          "id":"67705067268351022700"
+         ,"Identification":{
+            "Action":"Cancelar Caixa de Di\u00E1logo"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Cancelar Caixa de Di\u00E1logo (67705066524786022699)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+        }
+      ]
+    }
+  ]
+ ,"Processes":[
+    {
+      "id":"67705070452969022705"
+     ,"Identification":{
+        "Name":"Salvar Estilo do Tema"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"if :P10020_DESKTOP_THEME_STYLE_ID is not null then\n    for l_theme in (select theme_number\n                      from apex_application_themes\n                     where application_id = :app_id\n                       and is_current     = \u0027Yes\u0027)\n    loop\n        apex_util.set_current_theme_style (\n            p_theme_number   =\u003E l_theme.theme_number,\n            p_theme_style_id =\u003E :P10020_DESKTOP_THEME_STYLE_ID\n            );\n    end loop;\nend if;"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Success Message":{
+        "Success Message":"Defini\u00E7\u00F5es de Apar\u00EAncia do Aplicativo Salvas."
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+   ,{
+      "id":"67705070814873022706"
+     ,"Identification":{
+        "Name":"Salvar Prefer\u00EAncia de Estilo do Usu\u00E1rio Final"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"declare\n    l_enabled boolean := case when :P10020_END_USER_STYLE = \u0027Yes\u0027 then true else false end;\nbegin\n    for l_theme in ( select theme_number\n                       from apex_applications\n                      where application_id  = :APP_ID )\n    loop\n        if l_enabled then\n            apex_theme.enable_user_style (\n                p_application_id =\u003E :APP_ID,\n                p_theme_number   =\u003E l_theme.theme_number );\n        else\n            apex_theme.disable_user_style (\n                p_application_id =\u003E :APP_ID,\n                p_theme_number   =\u003E l_theme.theme_number );\n            apex_theme.clear_all_users_style(:APP_ID);\n        end if;\n    end loop;\nend;"
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Success Message":{
+        "Success Message":"Defini\u00E7\u00F5es de Apar\u00EAncia do Aplicativo Salvas."
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+  ]
+ ,"Branches":[
+    {
+      "id":"67705068208343022700"
+     ,"Identification":{
+        "Name":"Ramificar para P\u00E1gina Admin"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"After Processing"
+      }
+     ,"Behavior":{
+        "Type":"Page or URL (Redirect)"
+       ,"Target":{
+          "url":"f?p=\u0026APP_ID.:10000:\u0026APP_SESSION.::\u0026DEBUG.:RP::\u0026success_msg=#SUCCESS_MSG#"
+         ,"Page":"10000"
+         ,"Clear Cache":"RP"
+        }
+      }
+    }
+  ]
+}

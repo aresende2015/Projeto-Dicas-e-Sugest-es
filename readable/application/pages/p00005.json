@@ -1,0 +1,1130 @@
+{
+  "id":"5"
+ ,"Identification":{
+    "Name":"ASSUNTO - FORM"
+   ,"Alias":"ASSUNTO-FORM"
+   ,"Title":"Assunto"
+   ,"Page Group":"Assunto (67721759424398765653)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Modal Dialog"
+   ,"Dialog Template":"Theme Default"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"Dialog":{
+    "Chained":false
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"Do not focus cursor"
+   ,"Warn on Unsaved Changes":true
+  }
+ ,"Security":{
+    "Authentication":"Page Requires Authentication"
+   ,"Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Regions":[
+    {
+      "id":"67758584648041478490"
+     ,"Identification":{
+        "Title":"Assunto"
+       ,"Type":"Form"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Type":"Table \/ View"
+       ,"Table Owner":"Parsing Schema"
+       ,"Table Name":"TDOW_ASSUNTO"
+       ,"Include ROWID Column":false
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Blank with Attributes (67704877201885022490)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Edit":{
+          "Enabled":true
+         ,"Allowed Operations":[
+            "Add Row"
+           ,"Update Row"
+           ,"Delete Row"
+          ]
+         ,"Lost Update Type":"Row Values"
+        }
+      }
+    }
+   ,{
+      "id":"67758589595621478542"
+     ,"Identification":{
+        "Title":"Bot\u00F5es"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Parent Region":"No Parent"
+       ,"Position":"REGION_POSITION_03"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Buttons Container (67704880073492022492)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server-side Condition":{
+        "Type":"Item != Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"Text (escape special characters)"
+         ,"Mostrar Quebras de Linha":true
+        }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67757393621923816510"
+     ,"Identification":{
+        "Name":"P5_ACAO"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":110
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67757393809655816512"
+     ,"Identification":{
+        "Name":"P5_USUARIO"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":100
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"USUARIO"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67757393932461816513"
+     ,"Identification":{
+        "Name":"P5_RESTRITO"
+       ,"Type":"Alternar"
+      }
+     ,"Label":{
+        "Label":"Restrito"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Usar Padr\u00F5es":true
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":false
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"2"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":true
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"RESTRITO"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Read Only":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67757395640930816530"
+     ,"Identification":{
+        "Name":"P5_ACAO_ORIGINAL"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":120
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67757396775584816541"
+     ,"Identification":{
+        "Name":"P5_ARQUIVO"
+       ,"Type":"Procura de Arquivo..."
+      }
+     ,"Label":{
+        "Label":"Arquivo"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Exibir Como":"Inline File Browse"
+       ,"Tipo de Armazenamento":"Table APEX_APPLICATION_TEMP_FILES"
+       ,"Expurgar Arquivo em":"End of Session"
+       ,"Permitir V\u00E1rios Arquivos":false
+       ,"Tipos de Arquivo":"application\/pdf,text\/plain,image\/*"
+      }
+     ,"Layout":{
+        "Sequence":80
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":30
+      }
+     ,"Validation":{
+        "Value Required":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"ARQUIVO"
+       ,"Data Type":"BLOB"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO_ORIGINAL"
+       ,"Value":"1"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67757396999946816543"
+     ,"Identification":{
+        "Name":"P5_ARQUIVO_CONSULTA_ALTERACAO"
+       ,"Type":"Procura de Arquivo..."
+      }
+     ,"Label":{
+        "Label":"Novo"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Exibir Como":"Inline File Browse"
+       ,"Tipo de Armazenamento":"BLOB column specified in Item Source attribute"
+       ,"Tipo de Coluna MIME":"MIMETYPE"
+       ,"Coluna do Nome de Arquivo":"FILENAME"
+       ,"Exibir Link de Download":true
+       ,"Disposi\u00E7\u00E3o de Conte\u00FAdo":"Attachment"
+      }
+     ,"Layout":{
+        "Sequence":90
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":30
+      }
+     ,"Validation":{
+        "Value Required":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"ARQUIVO"
+       ,"Data Type":"BLOB"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item != Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"1"
+      }
+     ,"Read Only":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67758584978226478491"
+     ,"Identification":{
+        "Name":"P5_ID"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"ID"
+       ,"Data Type":"NUMBER"
+       ,"Query Only":false
+       ,"Primary Key":true
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Checksum Required - Session Level"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67758585366640478491"
+     ,"Identification":{
+        "Name":"P5_ID_TIPO_ASSUNTO"
+       ,"Type":"Lista de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Tipo de Assunto"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "A\u00E7\u00E3o da P\u00E1gina na Sele\u00E7\u00E3o":"None"
+       ,"Permitir Sele\u00E7\u00E3o M\u00FAltipla":false
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"7"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Required - Floating (67705014904991022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Height":1
+      }
+     ,"Validation":{
+        "Value Required":true
+      }
+     ,"List of Values":{
+        "Type":"SQL Query"
+       ,"SQL Query":"SELECT DSC_TIPO_ASSUNTO, ID FROM TDOW_TIPO_ASSUNTO WHERE ATIVO = \u0027Y\u0027"
+       ,"Display Extra Values":true
+       ,"Display Null Value":true
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"ID_TIPO_ASSUNTO"
+       ,"Data Type":"NUMBER"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Read Only":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67758585774666478535"
+     ,"Identification":{
+        "Name":"P5_TITULO_ASSUNTO"
+       ,"Type":"\u00C1rea de Texto"
+      }
+     ,"Label":{
+        "Label":"T\u00EDtulo do Assunto"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Redimension\u00E1vel":false
+       ,"Altura Autom\u00E1tica":false
+       ,"Contador de Caracteres":false
+       ,"Remover Espa\u00E7os":"Leading and Trailing"
+      }
+     ,"Layout":{
+        "Sequence":50
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Required - Floating (67705014904991022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":60
+       ,"Height":2
+      }
+     ,"Validation":{
+        "Value Required":true
+       ,"Maximum Length":200
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"TITULO_ASSUNTO"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Read Only":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67758586164189478535"
+     ,"Identification":{
+        "Name":"P5_DSC_ASSUNTO"
+       ,"Type":"\u00C1rea de Texto"
+      }
+     ,"Label":{
+        "Label":"Descri\u00E7\u00E3o"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Redimension\u00E1vel":false
+       ,"Altura Autom\u00E1tica":false
+       ,"Contador de Caracteres":false
+       ,"Remover Espa\u00E7os":"Leading and Trailing"
+      }
+     ,"Layout":{
+        "Sequence":60
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":60
+       ,"Height":4
+      }
+     ,"Validation":{
+        "Value Required":false
+       ,"Maximum Length":4000
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"DSC_ASSUNTO"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Read Only":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67758586593815478536"
+     ,"Identification":{
+        "Name":"P5_URL_ASSUNTO"
+       ,"Type":"\u00C1rea de Texto"
+      }
+     ,"Label":{
+        "Label":"Url Assunto"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Redimension\u00E1vel":false
+       ,"Altura Autom\u00E1tica":false
+       ,"Contador de Caracteres":false
+       ,"Remover Espa\u00E7os":"Leading and Trailing"
+      }
+     ,"Layout":{
+        "Sequence":70
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":60
+       ,"Height":2
+      }
+     ,"Validation":{
+        "Value Required":false
+       ,"Maximum Length":200
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"URL_ASSUNTO"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Read Only":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO"
+       ,"Value":"3"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67758586931840478537"
+     ,"Identification":{
+        "Name":"P5_DATA_CRIACAO"
+       ,"Type":"Somente Exibi\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Data de Cria\u00E7\u00E3o"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Formato":"Plain Text"
+       ,"Com Base Em":"Item Value"
+       ,"Mostrar Quebras de Linha":true
+       ,"Enviar ao Submeter P\u00E1gina":true
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Assunto (67758584648041478490)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":false
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"3"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Required - Floating (67705014904991022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"Assunto (67758584648041478490)"
+       ,"Column":"DATA_CRIACAO"
+       ,"Data Type":"TIMESTAMP"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Default":{
+        "Type":"SQL Query"
+       ,"SQL Query":"SELECT SYSDATE FROM DUAL;"
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67758589914159478542"
+     ,"Identification":{
+        "Button Name":"CANCEL"
+       ,"Label":"Cancelar"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Bot\u00F5es (67758589595621478542)"
+       ,"Position":"CLOSE"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Defined by Dynamic Action"
+       ,"Execute Validations":true
+      }
+    }
+   ,{
+      "id":"67758591304502478544"
+     ,"Identification":{
+        "Button Name":"DELETE"
+       ,"Label":"Excluir"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Bot\u00F5es (67758589595621478542)"
+       ,"Position":"DELETE"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":false
+       ,"Warn on Unsaved Changes":"Do Not Check"
+       ,"Database Action":"SQL DELETE action"
+      }
+     ,"Confirmation":{
+        "Message":"\u0026APP_TEXT$DELETE_MSG!RAW."
+       ,"Style":"Danger"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item is NOT NULL"
+       ,"Item":"P5_ID"
+      }
+    }
+   ,{
+      "id":"67758591745396478544"
+     ,"Identification":{
+        "Button Name":"SAVE"
+       ,"Label":"Aplicar Altera\u00E7\u00F5es"
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Bot\u00F5es (67758589595621478542)"
+       ,"Position":"NEXT"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+       ,"Database Action":"SQL UPDATE action"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item is NOT NULL"
+       ,"Item":"P5_ID"
+      }
+    }
+   ,{
+      "id":"67758592153588478544"
+     ,"Identification":{
+        "Button Name":"CREATE"
+       ,"Label":"Criar"
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Bot\u00F5es (67758589595621478542)"
+       ,"Position":"NEXT"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+       ,"Database Action":"SQL INSERT action"
+      }
+     ,"Server-side Condition":{
+        "Type":"Item is NULL"
+       ,"Item":"P5_ID"
+      }
+    }
+  ]
+ ,"Dynamic Actions":[
+    {
+      "id":"67757395078762816524"
+     ,"Identification":{
+        "Name":"Verifica se veio para Alterar"
+      }
+     ,"Execution":{
+        "Sequence":20
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.BROWSER.READY"
+      }
+     ,"Client-side Condition":{
+        "Type":"Item = Value"
+       ,"Item":"P5_ACAO_ORIGINAL"
+       ,"Value":"2"
+      }
+     ,"Execution":{
+        "Event Scope":"Once"
+      }
+     ,"Actions":[
+        {
+          "id":"67757395109403816525"
+         ,"Identification":{
+            "Name":"N\u00E3o pode alterar dados de outro usu\u00E1rio"
+           ,"Action":"Alerta"
+          }
+         ,"Settings":{
+            "T\u00EDtulo":"Alerta!"
+           ,"Mensagem":"Voc\u00EA n\u00E3o tem permiss\u00E3o para alterar dados de outro usu\u00E1rio."
+           ,"Estilo":"PADR\u00C3O"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Verifica se veio para Alterar (67757395078762816524)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+         ,"Server-side Condition":{
+            "Type":"Item != Value"
+           ,"Item":"P5_USUARIO"
+           ,"Value":"\u0026APP_USER."
+          }
+        }
+      ]
+    }
+   ,{
+      "id":"67758590014648478542"
+     ,"Identification":{
+        "Name":"Cancel Dialog"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.BROWSER.CLICK"
+       ,"Selection Type":"Button"
+       ,"Button":"CANCEL (67758589914159478542)"
+      }
+     ,"Execution":{
+        "Event Scope":"Static"
+       ,"Type":"Immediate"
+      }
+     ,"Actions":[
+        {
+          "id":"67758590869834478544"
+         ,"Identification":{
+            "Action":"Cancelar Caixa de Di\u00E1logo"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Cancel Dialog (67758590014648478542)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+        }
+      ]
+    }
+  ]
+ ,"Validations":[
+    {
+      "id":"67758587446298478541"
+     ,"Identification":{
+        "Name":"P5_DATA_CRIACAO must be timestamp"
+      }
+     ,"Execution":{
+        "Sequence":50
+      }
+     ,"Validation":{
+        "Type":"Item is a valid timestamp"
+       ,"Item":"P5_DATA_CRIACAO"
+       ,"Always Execute":false
+      }
+     ,"Error":{
+        "Error Message":"#LABEL# deve ser um timestamp v\u00E1lido."
+       ,"Display Location":"Inline with Field and in Notification"
+       ,"Associated Item":"P5_DATA_CRIACAO (67758586931840478537)"
+      }
+    }
+  ]
+ ,"Processes":[
+    {
+      "id":"67757394526893816519"
+     ,"Identification":{
+        "Name":"Verifica permiss\u00E3o para alterar"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"if :P5_ACAO = 2 AND :P5_USUARIO \u003C\u003E :APP_USER then\n    :P5_ACAO := 3;\nend if;"
+      }
+     ,"Execution":{
+        "Sequence":30
+       ,"Point":"Before Header"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+    }
+   ,{
+      "id":"67757396879566816542"
+     ,"Identification":{
+        "Name":"Insert no arquivo campo blob"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"FOR TMP_F IN (SELECT * FROM APEX_APPLICATION_TEMP_FILES WHERE NAME = :P5_ARQUIVO)\nLOOP\n    UPDATE TDOW_ASSUNTO \n        SET ARQUIVO  = TMP_F.BLOB_CONTENT,\n            FILENAME = TMP_F.FILENAME,\n            MIMETYPE = TMP_F.MIME_TYPE\n    WHERE ID = :P5_ID;\nEND LOOP;\nDELETE FROM APEX_APPLICATION_TEMP_FILES;"
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+   ,{
+      "id":"67758592551563478545"
+     ,"Identification":{
+        "Name":"Inicializar o form ASSUNTO - FORM"
+       ,"Type":"Form - Inicializa\u00E7\u00E3o"
+       ,"Form Region":"Assunto (67758584648041478490)"
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Before Header"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+    }
+   ,{
+      "id":"67758592985291478545"
+     ,"Identification":{
+        "Name":"Processar o form ASSUNTO - FORM"
+       ,"Type":"Form - Processamento Autom\u00E1tico de Linhas (DML)"
+       ,"Form Region":"Assunto (67758584648041478490)"
+      }
+     ,"Settings":{
+        "Tipo de Alvo":"Region Source"
+       ,"Impedir Perda de Atualiza\u00E7\u00F5es":true
+       ,"Bloquear Linha":"Yes"
+       ,"Retornar Chave(s) Prim\u00E1ria(s) ap\u00F3s Inser\u00E7\u00E3o":true
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+   ,{
+      "id":"67758593303905478545"
+     ,"Identification":{
+        "Name":"Fechar Caixa de Di\u00E1logo"
+       ,"Type":"Fechar Caixa de Di\u00E1logo"
+      }
+     ,"Execution":{
+        "Sequence":30
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+     ,"Server-side Condition":{
+        "Type":"Request is contained in Value"
+       ,"Value":"CREATE,SAVE,DELETE"
+      }
+    }
+  ]
+}

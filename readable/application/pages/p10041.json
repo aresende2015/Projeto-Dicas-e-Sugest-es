@@ -1,0 +1,459 @@
+{
+  "id":"10041"
+ ,"Identification":{
+    "Name":"Gerenciar Acesso do Usu\u00E1rio"
+   ,"Alias":"GERENCIAR-ACESSO-DO-USU\u00C1RIO"
+   ,"Title":"Gerenciar Acesso do Usu\u00E1rio"
+   ,"Page Group":"Administra\u00E7\u00E3o (67705047617390022628)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Modal Dialog"
+   ,"Dialog Template":"Modal Dialog (67704861900730022479)"
+   ,"Template Options":[
+      "#DEFAULT#"
+     ,"ui-dialog--stretch"
+     ,"t-Dialog--noPadding"
+    ]
+  }
+ ,"Dialog":{
+    "Chained":true
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"Do not focus cursor"
+   ,"Warn on Unsaved Changes":false
+  }
+ ,"Security":{
+    "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
+   ,"Authentication":"Page Requires Authentication"
+   ,"Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Help":{
+    "Help Text":"\u003Cp\u003EEsta p\u00E1gina mostra um relat\u00F3rio de usu\u00E1rios do aplicativo e o n\u00EDvel de acesso concedido.\u003C\/p\u003E\n\u003Cp\u003EClique nos cabe\u00E7alhos da coluna para classificar e filtrar os dados ou clique no bot\u00E3o \u003Cstrong\u003EA\u00E7\u00F5es\u003C\/strong\u003E para personalizar a exibi\u00E7\u00E3o da coluna e muitas funcionalidades avan\u00E7adas adicionais.\u003Cbr\u003E\nClique no bot\u00E3o \u003Cstrong\u003ERedefinir\u003C\/strong\u003E para redefinir o relat\u00F3rio interativo de volta \u00E0s defini\u00E7\u00F5es padr\u00E3o.\u003C\/p\u003E\n\u003Cp\u003EClique no \u00EDcone de edi\u00E7\u00E3o (l\u00E1pis amarelo) para editar os detalhes do usu\u00E1rio e o n\u00EDvel de acesso ou para excluir o usu\u00E1rio.\u003C\/p\u003E\n\u003Cp\u003EClique em \u003Cstrong\u003EAdicionar Usu\u00E1rio\u003C\/strong\u003E, na parte superior do relat\u00F3rio, para adicionar um novo usu\u00E1rio e seu n\u00EDvel de acesso.\u003C\/p\u003E"
+  }
+ ,"Configuration":{
+    "Build Option":"Recurso: Controle de Acesso (67705043211207022580)"
+  }
+ ,"Regions":[
+    {
+      "id":"67705156433079023610"
+     ,"Identification":{
+        "Title":"Gerenciar Acesso do Usu\u00E1rio"
+       ,"Type":"Relat\u00F3rio Interativo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Type":"SQL Query"
+       ,"SQL Query":"select id,\n   user_name_lc USERNAME,\n   role_names ACCESS_ROLE\nfrom APEX_APPL_ACL_USERS\nwhere APPLICATION_ID = :APP_ID"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Interactive Report (67704933436631022518)"
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"t-IRR-region--noBorders"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "id":"67705157218385023611"
+       ,"Link":{
+          "Link Column":"Link to Custom Target"
+         ,"Target":{
+            "url":"f?p=\u0026APP_ID.:10042:\u0026APP_SESSION.::\u0026DEBUG.:RP:P10042_ID:\u005C#ID#\u005C"
+           ,"Page":"10042"
+           ,"Clear Cache":"RP"
+           ,"Values":{
+              "P10042_ID":"#ID#"
+            }
+          }
+         ,"Link Icon":"\u003Cspan aria-label=\"Editar\"\u003E\u003Cspan class=\"fa fa-edit\" aria-hidden=\"true\" title=\"Editar\"\u003E\u003C\/span\u003E\u003C\/span\u003E"
+        }
+       ,"Pagination":{
+          "Type":"Row Ranges X to Y"
+         ,"Display Position":"Bottom - Right"
+        }
+       ,"Performance":{
+          "Lazy Loading":false
+        }
+       ,"Messages":{
+          "When No Data Found":"Dados n\u00E3o encontrados."
+         ,"When More Data Found":"A contagem m\u00E1xima de linhas deste relat\u00F3rio \u00E9 #MAX_ROW_COUNT# linhas. Aplique um filtro para reduzir o n\u00FAmero de registros em sua consulta."
+        }
+       ,"Search Bar":{
+          "Include Search Bar":true
+         ,"Search Field":true
+         ,"Finder Drop Down":true
+         ,"Reports Select List":true
+         ,"Rows Per Page Selector":false
+        }
+       ,"Actions Menu":{
+          "Include Actions Menu":true
+         ,"Filter":true
+         ,"Select Columns":true
+         ,"Rows Per Page":true
+         ,"Sort":true
+         ,"Control Break":true
+         ,"Highlight":true
+         ,"Compute":true
+         ,"Aggregate":true
+         ,"Chart":true
+         ,"Group By":true
+         ,"Pivot":true
+         ,"Flashback":true
+         ,"Save Report":true
+         ,"Save Public Report":false
+         ,"Reset":true
+         ,"Help":true
+         ,"Download":true
+         ,"Subscription":true
+        }
+       ,"Download":{
+          "Formats":[
+            "CSV"
+           ,"HTML"
+           ,"Excel"
+           ,"PDF"
+          ]
+         ,"Send as Email":true
+        }
+       ,"Heading":{
+          "Fixed To":"Page"
+        }
+       ,"Icon View":{
+          "Show":false
+        }
+       ,"Detail View":{
+          "Show":false
+        }
+       ,"Saved Reports":[
+          {
+            "id":"67705160009774023616"
+           ,"Identification":{
+              "Name":"Relat\u00F3rio Prim\u00E1rio"
+             ,"Alias":"677051601"
+            }
+          }
+        ]
+       ,"Columns":[
+          {
+            "id":"67705157639620023614"
+           ,"Identification":{
+              "Column Name":"ID"
+             ,"Type":"Hidden Column"
+            }
+           ,"Heading":{
+              "Heading":"ID"
+            }
+           ,"Layout":{
+              "Sequence":0
+            }
+           ,"Security":{
+              "Escape special characters":true
+            }
+          }
+         ,{
+            "id":"67705158050425023615"
+           ,"Identification":{
+              "Column Name":"USERNAME"
+             ,"Type":"Plain Text"
+            }
+           ,"Heading":{
+              "Heading":"Nome do Usu\u00E1rio"
+             ,"Alignment":"start"
+            }
+           ,"Single Row View":{
+              "Use Column Heading":true
+            }
+           ,"Layout":{
+              "Sequence":2
+             ,"Column Alignment":"start"
+            }
+           ,"Accessibility":{
+              "Value Identifies Row":false
+            }
+           ,"Column Filter":{
+              "Type":"Default Based on Column Type"
+            }
+           ,"Enable Users To":{
+              "Hide":true
+             ,"Sort":true
+             ,"Filter":true
+             ,"Highlight":true
+             ,"Control Break":true
+             ,"Aggregate":true
+             ,"Compute":true
+             ,"Chart":true
+             ,"Group By":true
+             ,"Pivot":true
+            }
+           ,"Security":{
+              "Escape special characters":true
+            }
+          }
+         ,{
+            "id":"67705158460356023615"
+           ,"Identification":{
+              "Column Name":"ACCESS_ROLE"
+             ,"Type":"Plain Text"
+            }
+           ,"Heading":{
+              "Heading":"Atribui\u00E7\u00F5es"
+             ,"Alignment":"start"
+            }
+           ,"Single Row View":{
+              "Use Column Heading":true
+            }
+           ,"Layout":{
+              "Sequence":3
+             ,"Column Alignment":"start"
+            }
+           ,"Accessibility":{
+              "Value Identifies Row":false
+            }
+           ,"Column Filter":{
+              "Type":"Default Based on Column Type"
+            }
+           ,"Enable Users To":{
+              "Hide":true
+             ,"Sort":true
+             ,"Filter":true
+             ,"Highlight":true
+             ,"Control Break":true
+             ,"Aggregate":true
+             ,"Compute":true
+             ,"Chart":true
+             ,"Group By":true
+             ,"Pivot":true
+            }
+           ,"Security":{
+              "Escape special characters":true
+            }
+          }
+        ]
+       ,"Printing":{
+          "Output":{
+            "View File As":"Attachment"
+          }
+         ,"Page":{
+            "Size":"Letter"
+           ,"Orientation":"Landscape"
+           ,"Units":"Inches"
+           ,"Width":11
+           ,"Height":8.5
+           ,"Border Width":0.5
+           ,"Border Color":"#666666"
+          }
+         ,"Page Header":{
+            "Font":"Helvetica"
+           ,"Font Weight":"Normal"
+           ,"Font Size":12
+           ,"Font Color":"#000000"
+           ,"Alignment":"center"
+           ,"Page Header Text":"Gerenciar Acesso do Usu\u00E1rio"
+          }
+         ,"Column Headings":{
+            "Font":"Helvetica"
+           ,"Font Weight":"Bold"
+           ,"Font Size":10
+           ,"Font Color":"#000000"
+           ,"Background Color":"#EEEEEE"
+          }
+         ,"Columns":{
+            "Font":"Helvetica"
+           ,"Font Weight":"Normal"
+           ,"Font Size":10
+           ,"Font Color":"#000000"
+           ,"Background Color":"#FFFFFF"
+          }
+         ,"Page Footer":{
+            "Font":"Helvetica"
+           ,"Font Weight":"Normal"
+           ,"Font Size":12
+           ,"Font Color":"#000000"
+           ,"Alignment":"center"
+          }
+        }
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67705160902719023617"
+     ,"Identification":{
+        "Button Name":"RESET_REPORT"
+       ,"Label":"Redefinir"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Gerenciar Acesso do Usu\u00E1rio (67705156433079023610)"
+       ,"Position":"RIGHT_OF_IR_SEARCH_BAR"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text with Icon (67705016246098022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "t-Button--iconLeft"
+         ,"t-Button--gapRight"
+        ]
+       ,"Icon":"fa-undo-alt"
+      }
+     ,"Behavior":{
+        "Action":"Redirect to Page in this Application"
+       ,"Target":{
+          "url":"f?p=\u0026APP_ID.:\u0026APP_PAGE_ID.:\u0026APP_SESSION.::\u0026DEBUG.:\u0026APP_PAGE_ID.,RR::"
+         ,"Page":"\u0026APP_PAGE_ID."
+         ,"Clear Cache":"\u0026APP_PAGE_ID.,RR"
+        }
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+   ,{
+      "id":"67705161346824023617"
+     ,"Identification":{
+        "Button Name":"ADD_MULTIPLE_USERS"
+       ,"Label":"Adicionar Diversos Usu\u00E1rios"
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Gerenciar Acesso do Usu\u00E1rio (67705156433079023610)"
+       ,"Position":"RIGHT_OF_IR_SEARCH_BAR"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":false
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Redirect to Page in this Application"
+       ,"Target":{
+          "url":"f?p=\u0026APP_ID.:10043:\u0026APP_SESSION.::\u0026DEBUG.:10043::"
+         ,"Page":"10043"
+         ,"Clear Cache":"10043"
+        }
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+   ,{
+      "id":"67705161799323023618"
+     ,"Identification":{
+        "Button Name":"ADD_USER"
+       ,"Label":"Adicionar Usu\u00E1rio"
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Gerenciar Acesso do Usu\u00E1rio (67705156433079023610)"
+       ,"Position":"RIGHT_OF_IR_SEARCH_BAR"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Redirect to Page in this Application"
+       ,"Target":{
+          "url":"f?p=\u0026APP_ID.:10042:\u0026APP_SESSION.::\u0026DEBUG.:10042::"
+         ,"Page":"10042"
+         ,"Clear Cache":"10042"
+        }
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+  ]
+ ,"Dynamic Actions":[
+    {
+      "id":"67705156554543023610"
+     ,"Identification":{
+        "Name":"Atualizar Relat\u00F3rio"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.FAMEWORK.APEXAFTERCLOSEDIALOG"
+       ,"Selection Type":"Region"
+       ,"Region":"Gerenciar Acesso do Usu\u00E1rio (67705156433079023610)"
+      }
+     ,"Execution":{
+        "Event Scope":"Static"
+       ,"Type":"Immediate"
+      }
+     ,"Actions":[
+        {
+          "id":"67705162360565023618"
+         ,"Identification":{
+            "Action":"Atualizar"
+          }
+         ,"Affected Elements":{
+            "Selection Type":"Region"
+           ,"Region":"Gerenciar Acesso do Usu\u00E1rio (67705156433079023610)"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Atualizar Relat\u00F3rio (67705156554543023610)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+        }
+      ]
+    }
+  ]
+}

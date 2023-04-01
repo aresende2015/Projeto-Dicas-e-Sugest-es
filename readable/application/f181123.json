@@ -1,0 +1,171 @@
+{
+  "id":"181123"
+ ,"Identification":{
+    "Name":"Assuntos e dicas"
+   ,"Alias":"ASSUNTOS-E-DICAS"
+   ,"Version":"Release 1.0"
+  }
+ ,"Row Search":{
+    "Tokenize":true
+  }
+ ,"Availability":{
+    "Status":"Available with Developer Toolbar"
+   ,"Global Notification Message":"Obrigado a todos pela contribui\u00E7\u00E3o. Vlw Pedro Paulo e Montezi."
+   ,"Build Status":"Run and Build Application"
+  }
+ ,"Error Handling":{
+    "Default Display Location":"Inline with Field and in Notification"
+  }
+ ,"Report Printing":{
+    "Type":"Use Instance Settings"
+  }
+ ,"Advanced":{
+    "Friendly URLs":true
+   ,"Allow Feedback":true
+   ,"Logging":true
+   ,"Debugging":true
+   ,"Compatibility Mode":"21.2 \/ 22.1 \/ 22.2"
+  }
+ ,"Authentication":{
+    "Public User":"APEX_PUBLIC_USER"
+   ,"Authentication Scheme":"Contas do Oracle APEX (67704840254183022465)"
+  }
+ ,"Authorization":{
+    "Authorization Scheme":"Direitos do Leitor (67705046243333022626)"
+   ,"Run on Public Pages":false
+   ,"Run on Background Job":true
+   ,"Source for Role or Group Schemes":"Access Control User Role Assignments"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Disabled"
+  }
+ ,"Session State Protection":{
+    "Enabled":true
+  }
+ ,"Security":{
+    "Deep Linking":"Disabled"
+   ,"Browser Cache":"Disabled"
+   ,"Embed in Frames":"Deny"
+   ,"Referrer Policy":"strict-origin"
+   ,"HTML Escaping Mode":"Extended"
+   ,"Runtime API Usage":[
+      "Modify This Application"
+    ]
+  }
+ ,"Database Session":{
+    "Parsing Schema":"WKSP_ARESENDE"
+  }
+ ,"Globalization":{
+    "Primary Language":"Portuguese (Brazil) (pt-br)"
+   ,"Document Direction":"Left-To-Right"
+   ,"Language Derived From":"Application Primary Language"
+   ,"Automatic Time Zone":false
+   ,"Automatic CSV Encoding":true
+  }
+ ,"Application Format Masks":{
+    "Date":"DS"
+   ,"Timestamp":"DS"
+   ,"Timestamp Time Zone":"DS"
+  }
+ ,"Character Value Comparison":{
+    "Behavior":"Database session NLS setting (default)"
+  }
+ ,"Logo":{
+    "Type":"Text"
+   ,"Text":"Assuntos e dicas"
+  }
+ ,"Progressive Web App":{
+    "Enable":true
+   ,"Installable":true
+   ,"Display":"Standalone"
+   ,"Screen Orientation":"Any"
+   ,"iOS Status Bar Style":"Black Text and White Background"
+  }
+ ,"Navigation":{
+    "Home URL":{
+      "url":"f?p=\u0026APP_ID.:1:\u0026APP_SESSION.::\u0026DEBUG.:::"
+     ,"Page":"1"
+    }
+   ,"Login URL":{
+      "url":"f?p=\u0026APP_ID.:LOGIN:\u0026APP_SESSION.::\u0026DEBUG.:::"
+     ,"Page":"LOGIN"
+    }
+  }
+ ,"Navigation Menu":{
+    "List Template":"Side Navigation Menu (67705003949619022554)"
+   ,"Template Options":[
+      "#DEFAULT#"
+     ,"t-TreeNav--styleA"
+     ,"js-navCollapsed--hidden"
+    ]
+   ,"List Position":"Side"
+   ,"List":"Menu de Navega\u00E7\u00E3o (67704841018780022466)"
+  }
+ ,"Navigation Bar":{
+    "Implementation":"List"
+   ,"List":"Barra de Navega\u00E7\u00E3o (67705041330437022574)"
+   ,"List Template":"Navigation Bar (67705003540645022554)"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"JavaScript":{
+    "Include jQuery Migrate":false
+  }
+ ,"Attributes":{
+    "Theme":"Universal Theme (42)"
+   ,"Global Page":"0"
+   ,"Enable End Users to choose Theme Style":false
+   ,"Add \"Built with APEX\" to Footer":false
+  }
+ ,"Substitutions":[
+    {
+      "id":"1"
+     ,"Identification":{
+        "Name":"APP_NAME"
+      }
+     ,"Value":{
+        "Static Value":"Assuntos e dicas"
+      }
+    }
+  ]
+ ,"Application Settings":[
+    {
+      "id":"67705047097624022627"
+     ,"Identification":{
+        "Name":"FEEDBACK_ATTACHMENTS_YN"
+      }
+     ,"Value":{
+        "Value":"Y"
+       ,"Required":false
+      }
+     ,"Advanced":{
+        "Valid Values":"Y, N"
+       ,"On Upgrade Keep Value":true
+      }
+     ,"Configuration":{
+        "Build Option":"Recurso: Feedback (67705043497937022580)"
+      }
+    }
+   ,{
+      "id":"67705047373309022627"
+     ,"Identification":{
+        "Name":"ACCESS_CONTROL_SCOPE"
+      }
+     ,"Value":{
+        "Value":"ACL_ONLY"
+       ,"Required":false
+      }
+     ,"Advanced":{
+        "Valid Values":"ACL_ONLY, ALL_USERS"
+       ,"On Upgrade Keep Value":true
+      }
+     ,"Configuration":{
+        "Build Option":"Recurso: Controle de Acesso (67705043211207022580)"
+      }
+     ,"Comments":{
+        "Comments":"O n\u00EDvel de acesso padr\u00E3o fornecido a usu\u00E1rios autenticados que n\u00E3o est\u00E3o na lista de controle de acesso"
+      }
+    }
+  ]
+}

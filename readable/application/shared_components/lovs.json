@@ -1,0 +1,323 @@
+[
+  {
+    "id":"67705068683315022701"
+   ,"Identification":{
+      "Name":"DESKTOP THEME STYLES"
+    }
+   ,"Source":{
+      "Location":"Local Database"
+     ,"Type":"SQL Query"
+     ,"SQL Query":"select s.name d,\n       s.theme_style_id r\n  from apex_application_theme_styles s,\n       apex_application_themes t\n where s.application_id = :app_id\n   and t.application_id = s.application_id\n   and t.theme_number   = s.theme_number\n   and t.is_current     = \u0027Yes\u0027\n order by 1"
+    }
+   ,"Column Mapping":{
+      "Return":"R"
+     ,"Display":"D"
+     ,"Default Sort":"Use Order By from Query"
+    }
+  }
+ ,{
+    "id":"67705069393582022704"
+   ,"Identification":{
+      "Name":"USER_THEME_PREFERENCE"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"67705069689240022705"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"Permite que os Usu\u00E1rios Finais escolham o Estilo do Tema"
+         ,"Return":"Yes"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"67705088305935023215"
+   ,"Identification":{
+      "Name":"TIMEFRAME (4 WEEKS)"
+    }
+   ,"Source":{
+      "Location":"Local Database"
+     ,"Type":"SQL Query"
+     ,"SQL Query":"select disp,\n       val as seconds\n  from table( apex_util.get_timeframe_lov_data )\n order by insert_order"
+    }
+   ,"Column Mapping":{
+      "Return":"SECONDS"
+     ,"Display":"DISP"
+     ,"Default Sort":"Use Order By from Query"
+    }
+  }
+ ,{
+    "id":"67705135097568023378"
+   ,"Identification":{
+      "Name":"VIEW_AS_REPORT_CHART"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"67705135313539023378"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"Adicionar P\u00E1gina do Relat\u00F3rio"
+         ,"Return":"REPORT"
+        }
+       ,"Globalization":{
+          "Template":"\u003Cspan class=\"fa fa-table\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\u003Cspan class=\"u-VisuallyHidden\"\u003E#DISPLAY_VALUE#\u003C\/span\u003E"
+        }
+      }
+     ,{
+        "id":"67705135729841023379"
+       ,"Entry":{
+          "Sequence":2
+         ,"Display":"Adicionar P\u00E1gina do Gr\u00E1fico"
+         ,"Return":"CHART"
+        }
+       ,"Globalization":{
+          "Template":"\u003Cspan class=\"fa fa-pie-chart\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\u003Cspan class=\"u-VisuallyHidden\"\u003E#DISPLAY_VALUE#\u003C\/span\u003E"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"67705167718509023622"
+   ,"Identification":{
+      "Name":"ACCESS_ROLES"
+    }
+   ,"Source":{
+      "Location":"Local Database"
+     ,"Type":"SQL Query"
+     ,"SQL Query":"select role_name d, role_id r\nfrom APEX_APPL_ACL_ROLES where application_id = :APP_ID \norder by 1"
+    }
+   ,"Column Mapping":{
+      "Return":"R"
+     ,"Display":"D"
+     ,"Default Sort":"Use Order By from Query"
+    }
+  }
+ ,{
+    "id":"67705175240263023630"
+   ,"Identification":{
+      "Name":"EMAIL_USERNAME_FORMAT"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"67705175523411023630"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"Endere\u00E7os de E-mail"
+         ,"Return":"EMAIL"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"67705192737145023865"
+   ,"Identification":{
+      "Name":"FEEDBACK_RATING"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"67705193092102023865"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"Positivo"
+         ,"Return":"3"
+        }
+       ,"Globalization":{
+          "Template":"\u003Cspan title=\"#DISPLAY_VALUE#\" aria-label=\"#DISPLAY_VALUE#\"\u003E\u003Cspan class=\"fa fa-smile-o fa-2x feedback-positive\" aria-hidden=\"true\" \u003E\u003C\/span\u003E\u003C\/span\u003E"
+        }
+      }
+     ,{
+        "id":"67705193415057023865"
+       ,"Entry":{
+          "Sequence":2
+         ,"Display":"Neutro"
+         ,"Return":"2"
+        }
+       ,"Globalization":{
+          "Template":"\u003Cspan title=\"#DISPLAY_VALUE#\" aria-label=\"#DISPLAY_VALUE#\"\u003E\u003Cspan class=\"fa fa-emoji-neutral fa-2x feedback-neutral\" aria-hidden=\"true\" \u003E\u003C\/span\u003E\u003C\/span\u003E"
+        }
+      }
+     ,{
+        "id":"67705193835129023865"
+       ,"Entry":{
+          "Sequence":3
+         ,"Display":"Negativo"
+         ,"Return":"1"
+        }
+       ,"Globalization":{
+          "Template":"\u003Cspan title=\"#DISPLAY_VALUE#\" aria-label=\"#DISPLAY_VALUE#\"\u003E\u003Cspan class=\"fa fa-frown-o fa-2x feedback-negative\" aria-hidden=\"true\" \u003E\u003C\/span\u003E\u003C\/span\u003E"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"67705205173153023874"
+   ,"Identification":{
+      "Name":"FEEDBACK_STATUS"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"67705205404989023874"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"Sem A\u00E7\u00E3o"
+         ,"Return":"0"
+        }
+      }
+     ,{
+        "id":"67705205814704023875"
+       ,"Entry":{
+          "Sequence":2
+         ,"Display":"Confirmado"
+         ,"Return":"1"
+        }
+      }
+     ,{
+        "id":"67705206227466023875"
+       ,"Entry":{
+          "Sequence":3
+         ,"Display":"Abrir"
+         ,"Return":"3"
+        }
+      }
+     ,{
+        "id":"67705206681732023875"
+       ,"Entry":{
+          "Sequence":4
+         ,"Display":"Fechado"
+         ,"Return":"4"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"67721827292166239419"
+   ,"Identification":{
+      "Name":"TDOW_TIPO_ASSUNTO.DSC_TIPO_ASSUNTO"
+    }
+   ,"Source":{
+      "Location":"Local Database"
+     ,"Type":"Table \/ View"
+     ,"Table Owner":"Parsing Schema"
+     ,"Table Name":"TDOW_TIPO_ASSUNTO"
+    }
+   ,"Column Mapping":{
+      "Return":"ID"
+     ,"Display":"DSC_TIPO_ASSUNTO"
+     ,"Default Sort":"DSC_TIPO_ASSUNTO"
+     ,"Sort Direction":"Ascending (Nulls Last)"
+    }
+  }
+ ,{
+    "id":"67727809945462011228"
+   ,"Identification":{
+      "Name":"TIPO DE A\u00C7\u00C3O"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"67727810244360011228"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"Criar"
+         ,"Return":"1"
+        }
+      }
+     ,{
+        "id":"67727810675199011229"
+       ,"Entry":{
+          "Sequence":2
+         ,"Display":"Editar"
+         ,"Return":"2"
+        }
+      }
+     ,{
+        "id":"67727811088263011229"
+       ,"Entry":{
+          "Sequence":3
+         ,"Display":"Consultar"
+         ,"Return":"3"
+        }
+      }
+     ,{
+        "id":"67727811404892011229"
+       ,"Entry":{
+          "Sequence":4
+         ,"Display":"Excluir"
+         ,"Return":"4"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"68107763222950232478"
+   ,"Identification":{
+      "Name":"RESTRITO"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"68107763503935232479"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"SIM"
+         ,"Return":"Y"
+        }
+      }
+     ,{
+        "id":"68107763966779232479"
+       ,"Entry":{
+          "Sequence":2
+         ,"Display":"N\u00C3O"
+         ,"Return":"N"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"68119960338656260488"
+   ,"Identification":{
+      "Name":"ATIVO"
+    }
+   ,"Source":{
+      "Location":"Static Values"
+    }
+   ,"Entries":[
+      {
+        "id":"68119960639272260489"
+       ,"Entry":{
+          "Sequence":1
+         ,"Display":"SIM"
+         ,"Return":"Y"
+        }
+      }
+     ,{
+        "id":"68119961082507260489"
+       ,"Entry":{
+          "Sequence":2
+         ,"Display":"N\u00C3O"
+         ,"Return":"N"
+        }
+      }
+    ]
+  }
+]

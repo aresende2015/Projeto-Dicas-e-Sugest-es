@@ -1,0 +1,97 @@
+[
+  {
+    "id":"67704839997082022465"
+   ,"Identification":{
+      "Name":"Comentado"
+    }
+   ,"Status":{
+      "Status":"Exclude"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+  }
+ ,{
+    "id":"67705043211207022580"
+   ,"Identification":{
+      "Name":"Recurso: Controle de Acesso"
+    }
+   ,"Status":{
+      "Status":"Include"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+   ,"Comments":{
+      "Comments":"Incorpore a autentica\u00E7\u00E3o de usu\u00E1rios baseada em atribui\u00E7\u00E3o no seu aplicativo e gerencie mapeamentos de nome de usu\u00E1rio para atribui\u00E7\u00F5es do aplicativo."
+    }
+  }
+ ,{
+    "id":"67705043355554022580"
+   ,"Identification":{
+      "Name":"Recurso: Relat\u00F3rio de Atividades"
+    }
+   ,"Status":{
+      "Status":"Include"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+   ,"Comments":{
+      "Comments":"Inclua diversos relat\u00F3rios e gr\u00E1ficos sobre a atividade do usu\u00E1rio final."
+    }
+  }
+ ,{
+    "id":"67705043497937022580"
+   ,"Identification":{
+      "Name":"Recurso: Feedback"
+    }
+   ,"Status":{
+      "Status":"Include"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+   ,"Comments":{
+      "Comments":"Forne\u00E7a um mecanismo para que os usu\u00E1rios finais postem coment\u00E1rios gen\u00E9ricos para os administradores e desenvolvedores de aplicativos."
+    }
+  }
+ ,{
+    "id":"67705043633904022580"
+   ,"Identification":{
+      "Name":"Recurso: Op\u00E7\u00F5es de Configura\u00E7\u00E3o"
+    }
+   ,"Status":{
+      "Status":"Include"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+   ,"Comments":{
+      "Comments":"Permitir que os administradores de aplicativos ativem ou desativem funcionalidades espec\u00EDficas, associadas a uma op\u00E7\u00E3o de build do Oracle APEX, de dentro do aplicativo."
+    }
+  }
+ ,{
+    "id":"67705043926291022580"
+   ,"Identification":{
+      "Name":"Recurso: P\u00E1gina Sobre"
+    }
+   ,"Status":{
+      "Status":"Include"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+   ,"Comments":{
+      "Comments":"Sobre esta p\u00E1gina do aplicativo."
+    }
+  }
+ ,{
+    "id":"67705044022766022580"
+   ,"Identification":{
+      "Name":"Recurso: Sele\u00E7\u00E3o de Estilo do Tema"
+    }
+   ,"Status":{
+      "Status":"Include"
+     ,"Default on Export":"Same as Current Status"
+     ,"On Upgrade Keep Status":false
+    }
+   ,"Comments":{
+      "Comments":"Permitir que os administradores selecionem um esquema de cores padr\u00E3o (estilo de tema) para o aplicativo. Os administradores tamb\u00E9m podem permitir que os usu\u00E1rios finais escolham seu pr\u00F3prio estilo de tema. "
+    }
+  }
+]
