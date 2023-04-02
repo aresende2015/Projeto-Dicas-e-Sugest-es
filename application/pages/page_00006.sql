@@ -24,7 +24,7 @@ wwv_flow_imp_page.create_page(
 ,p_browser_cache=>'N'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230401214042'
+,p_last_upd_yyyymmddhh24miss=>'20230402142206'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(68501089525216207805)
@@ -218,6 +218,35 @@ wwv_flow_imp_page.create_page_process(
 'END;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(68501091962685207829)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>unistr('Enviar email de confirma\00E7\00E3o da solicita\00E7\00E3o')
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'    numID NUMBER;',
+'BEGIN',
+'    ---Envia o e-mail',
+'   numID := APEX_MAIL.SEND( p_to        => :P6_EMAIL,',
+'                            p_from      => ''alex.q.resende@gmail.com'',',
+'                            p_subj      => ''Assuntos & Dicas'',',
+unistr('                            p_body      => ''Por favor! Aguarde a libera\00E7\00E3o com um novo email.'','),
+unistr('                            p_body_html => ''<b>Por favor!</b> Aguarde a libera\00E7\00E3o com um novo email.'');'),
+'        ',
+'',
+unistr('    ---Faz o envio do email para o sevidor de e-mail passado como par\00E2metro'),
+unistr('    ---Quando n\00E3o informado, herda das configura\00E7\00F5es da Workspace'),
+'    APEX_MAIL.PUSH_QUEUE(P_SMTP_HOSTNAME => ''127.0.0.0'',',
+'                         P_SMTP_PORTNO   => ''25'');',
+'    ',
+'',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_success_message=>unistr('Sua solicita\00E7\00E3o foi recebida. Favor verificar seu email.')
 );
 wwv_flow_imp.component_end;
 end;

@@ -442,6 +442,29 @@
         "Display Location":"Inline in Notification"
       }
     }
+   ,{
+      "id":"68501091962685207829"
+     ,"Identification":{
+        "Name":"Enviar email de confirma\u00E7\u00E3o da solicita\u00E7\u00E3o"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"DECLARE\n    numID NUMBER;\nBEGIN\n    ---Envia o e-mail\n   numID := APEX_MAIL.SEND( p_to        =\u003E :P6_EMAIL,\n                            p_from      =\u003E \u0027alex.q.resende@gmail.com\u0027,\n                            p_subj      =\u003E \u0027Assuntos \u0026 Dicas\u0027,\n                            p_body      =\u003E \u0027Por favor! Aguarde a libera\u00E7\u00E3o com um novo email.\u0027,\n                            p_body_html =\u003E \u0027\u003Cb\u003EPor favor!\u003C\/b\u003E Aguarde a libera\u00E7\u00E3o com um novo email.\u0027);\n        \n\n    ---Faz o envio do email para o sevidor de e-mail passado como par\u00E2metro\n    ---Quando n\u00E3o informado, herda das configura\u00E7\u00F5es da Workspace\n    APEX_MAIL.PUSH_QUEUE(P_SMTP_HOSTNAME =\u003E \u0027127.0.0.0\u0027,\n                         P_SMTP_PORTNO   =\u003E \u002725\u0027);\n    \n\nEND;"
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Success Message":{
+        "Success Message":"Sua solicita\u00E7\u00E3o foi recebida. Favor verificar seu email."
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
   ]
  ,"Branches":[
     {

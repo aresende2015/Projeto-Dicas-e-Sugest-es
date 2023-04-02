@@ -24,7 +24,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230401213302'
+,p_last_upd_yyyymmddhh24miss=>'20230402143508'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(68562475165555751144)
@@ -225,8 +225,38 @@ wwv_flow_imp_page.create_page_process(
 ,p_security_scheme=>wwv_flow_imp.id(67705046189535022626)
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(68562482771487751154)
+ p_id=>wwv_flow_imp.id(68501092361310207833)
 ,p_process_sequence=>30
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Alerta de envio de email confirmando o cadastro'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'    numID NUMBER;',
+'BEGIN',
+'    ---Envia o e-mail',
+'   numID := APEX_MAIL.SEND( p_to        => :P8_EMAIL,',
+'                            p_from      => ''alex.q.resende@gmail.com'',',
+'                            p_subj      => ''Assuntos & Dicas'',',
+'                            p_body      => ''Liberado! Seu acesso ao sistema foi liberado.'',',
+'                            p_body_html => ''<b>Liberado!</b><br>'' || :P8_LOGIN || '', seu acesso ao sistema foi liberado.<br><br> https://apex.oracle.com/pls/apex/r/aresende/assuntos-e-dicas'');',
+'        ',
+'',
+unistr('    ---Faz o envio do email para o sevidor de e-mail passado como par\00E2metro'),
+unistr('    ---Quando n\00E3o informado, herda das configura\00E7\00F5es da Workspace'),
+'    APEX_MAIL.PUSH_QUEUE(P_SMTP_HOSTNAME => ''127.0.0.0'',',
+'                         P_SMTP_PORTNO   => ''25'');',
+'    ',
+'',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(68562481178850751152)
+,p_process_success_message=>unistr('Liberado o acesso para o usu\00E1rio &P8_LOGIN.')
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(68562482771487751154)
+,p_process_sequence=>40
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'
 ,p_process_name=>unistr('Fechar Caixa de Di\00E1logo')

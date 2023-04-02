@@ -502,6 +502,32 @@
       }
     }
    ,{
+      "id":"68501092361310207833"
+     ,"Identification":{
+        "Name":"Alerta de envio de email confirmando o cadastro"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"DECLARE\n    numID NUMBER;\nBEGIN\n    ---Envia o e-mail\n   numID := APEX_MAIL.SEND( p_to        =\u003E :P8_EMAIL,\n                            p_from      =\u003E \u0027alex.q.resende@gmail.com\u0027,\n                            p_subj      =\u003E \u0027Assuntos \u0026 Dicas\u0027,\n                            p_body      =\u003E \u0027Liberado! Seu acesso ao sistema foi liberado.\u0027,\n                            p_body_html =\u003E \u0027\u003Cb\u003ELiberado!\u003C\/b\u003E\u003Cbr\u003E\u0027 || :P8_LOGIN || \u0027, seu acesso ao sistema foi liberado.\u003Cbr\u003E\u003Cbr\u003E https:\/\/apex.oracle.com\/pls\/apex\/r\/aresende\/assuntos-e-dicas\u0027);\n        \n\n    ---Faz o envio do email para o sevidor de e-mail passado como par\u00E2metro\n    ---Quando n\u00E3o informado, herda das configura\u00E7\u00F5es da Workspace\n    APEX_MAIL.PUSH_QUEUE(P_SMTP_HOSTNAME =\u003E \u0027127.0.0.0\u0027,\n                         P_SMTP_PORTNO   =\u003E \u002725\u0027);\n    \n\nEND;"
+      }
+     ,"Execution":{
+        "Sequence":30
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Success Message":{
+        "Success Message":"Liberado o acesso para o usu\u00E1rio \u0026P8_LOGIN."
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+     ,"Server-side Condition":{
+        "When Button Pressed":"SAVE (68562481178850751152)"
+      }
+    }
+   ,{
       "id":"68562481909249751153"
      ,"Identification":{
         "Name":"Inicializar o form USUARIO_SOLICITADO FORM"
@@ -543,7 +569,7 @@
        ,"Type":"Fechar Caixa de Di\u00E1logo"
       }
      ,"Execution":{
-        "Sequence":30
+        "Sequence":40
        ,"Point":"Processing"
        ,"Run Process":"Once Per Page Visit (default)"
       }
