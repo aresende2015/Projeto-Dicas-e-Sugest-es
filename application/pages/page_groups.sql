@@ -27,10 +27,6 @@ wwv_flow_imp_page.create_page_group(
  p_id=>wwv_flow_imp.id(67706746284689092430)
 ,p_group_name=>'Login'
 );
-wwv_flow_imp_page.create_page_group(
- p_id=>wwv_flow_imp.id(67715997561132460019)
-,p_group_name=>'Tipo de assunto'
-);
 wwv_flow_imp.component_end;
 end;
 /

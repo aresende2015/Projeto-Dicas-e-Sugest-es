@@ -34,6 +34,7 @@ wwv_flow_imp.create_flow(
 ,p_application_tab_set=>1
 ,p_logo_type=>'T'
 ,p_logo_text=>'Assuntos e dicas'
+,p_public_user=>'APEX_PUBLIC_USER'
 ,p_proxy_server=>nvl(wwv_flow_application_install.get_proxy,'')
 ,p_no_proxy_domains=>nvl(wwv_flow_application_install.get_no_proxy_domains,'')
 ,p_flow_version=>'Release 1.0'
@@ -42,16 +43,15 @@ wwv_flow_imp.create_flow(
 ,p_exact_substitutions_only=>'Y'
 ,p_browser_cache=>'N'
 ,p_browser_frame=>'D'
-,p_runtime_api_usage=>'T'
+,p_runtime_api_usage=>'T:W'
 ,p_security_scheme=>wwv_flow_imp.id(67705046243333022626)
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_auto_time_zone=>'N'
-,p_global_notification=>unistr('Obrigado a todos pela contribui\00E7\00E3o. Vlw Pedro Paulo e Montezi.')
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Assuntos e dicas'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230401010032'
+,p_last_upd_yyyymmddhh24miss=>'20230402133823'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>4
 ,p_print_server_type=>'INSTANCE'

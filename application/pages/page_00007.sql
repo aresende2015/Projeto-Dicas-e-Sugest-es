@@ -1,0 +1,109 @@
+prompt --application/pages/page_00007
+begin
+--   Manifest
+--     PAGE: 00007
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.4'
+,p_default_workspace_id=>56329041776944656426
+,p_default_application_id=>181123
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_ARESENDE'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>7
+,p_name=>'USUARIO_SOLICITADO'
+,p_alias=>'USUARIO-SOLICITADO'
+,p_step_title=>'USUARIO_SOLICITADO'
+,p_autocomplete_on_off=>'OFF'
+,p_group_id=>wwv_flow_imp.id(67706746284689092430)
+,p_page_template_options=>'#DEFAULT#'
+,p_required_role=>wwv_flow_imp.id(67705046189535022626)
+,p_protection_level=>'C'
+,p_page_component_map=>'03'
+,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20230401212510'
+);
+wwv_flow_imp_page.create_report_region(
+ p_id=>wwv_flow_imp.id(68562483367695751154)
+,p_name=>'USUARIO_SOLICITADO'
+,p_template=>wwv_flow_imp.id(67704943297290022523)
+,p_display_sequence=>10
+,p_region_template_options=>'#DEFAULT#:t-Region--noPadding'
+,p_component_template_options=>'#DEFAULT#:t-Report--stretch:t-Report--staticRowColors:t-Report--rowHighlight:t-Report--inline:t-Report--hideNoPagination'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'TABLE'
+,p_query_table=>'TDOW_USUARIO'
+,p_query_where=>'ATIVO = ''N'''
+,p_include_rowid_column=>false
+,p_ajax_enabled=>'Y'
+,p_lazy_loading=>false
+,p_query_row_template=>wwv_flow_imp.id(67704981100463022542)
+,p_query_num_rows=>50
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_no_data_found=>unistr('dados n\00E3o encontrados')
+,p_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_query_row_count_max=>500
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+,p_prn_output=>'N'
+,p_prn_format=>'PDF'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'N'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(68562483858378751163)
+,p_query_column_id=>1
+,p_column_alias=>'ID'
+,p_column_display_sequence=>0
+,p_use_as_row_header=>'N'
+,p_column_link=>'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:RP:P8_ID:\#ID#\'
+,p_column_linktext=>'<span aria-label="Editar"><span class="fa fa-edit" aria-hidden="true" title="Editar"></span></span>'
+,p_column_alignment=>'CENTER'
+,p_include_in_export=>'N'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(68562484232037751163)
+,p_query_column_id=>2
+,p_column_alias=>'LOGIN'
+,p_column_display_sequence=>2
+,p_column_heading=>'Login'
+,p_use_as_row_header=>'N'
+,p_heading_alignment=>'LEFT'
+,p_disable_sort_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(68562485087173751164)
+,p_query_column_id=>4
+,p_column_alias=>'EMAIL'
+,p_column_display_sequence=>4
+,p_column_heading=>'Email'
+,p_use_as_row_header=>'N'
+,p_heading_alignment=>'LEFT'
+,p_disable_sort_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(68562486277419751164)
+,p_name=>unistr('Editar Relat\00F3rio - Caixa de Di\00E1logo Fechada')
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(68562483367695751154)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(68562486777640751165)
+,p_event_id=>wwv_flow_imp.id(68562486277419751164)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(68562483367695751154)
+);
+wwv_flow_imp.component_end;
+end;
+/

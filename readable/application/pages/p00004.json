@@ -50,7 +50,10 @@
        ,"Table Owner":"Parsing Schema"
        ,"Table Name":"TDOW_ASSUNTO"
        ,"Include ROWID Column":false
-       ,"Where Clause":"RESTRITO = \u0027N\u0027 OR (RESTRITO = \u0027Y\u0027 AND USUARIO = :APP_USER)"
+       ,"Where Clause":"(RESTRITO = \u0027N\u0027 OR (RESTRITO = \u0027Y\u0027 AND USUARIO = :APP_USER))\nAND\n(USUARIO IN (SELECT DISTINCT USUARIO \n                FROM TDOW_ASSUNTO \n                WHERE :P4_MINHAS_CONTRIBUICOES = \u0027N\u0027\n                   OR USUARIO = :APP_USER\n            )\n)"
+       ,"Page Items to Submit":[
+          "P4_MINHAS_CONTRIBUICOES"
+        ]
       }
      ,"Layout":{
         "Sequence":10
@@ -214,36 +217,13 @@
             "id":"67757394162103816515"
            ,"Identification":{
               "Column Name":"USUARIO"
-             ,"Type":"Plain Text"
+             ,"Type":"Hidden Column"
             }
            ,"Heading":{
               "Heading":"Usuario"
-             ,"Alignment":"center"
-            }
-           ,"Single Row View":{
-              "Use Column Heading":true
             }
            ,"Layout":{
               "Sequence":40
-             ,"Column Alignment":"start"
-            }
-           ,"Accessibility":{
-              "Value Identifies Row":false
-            }
-           ,"Column Filter":{
-              "Type":"Default Based on Column Type"
-            }
-           ,"Enable Users To":{
-              "Hide":true
-             ,"Sort":true
-             ,"Filter":true
-             ,"Highlight":true
-             ,"Control Break":true
-             ,"Aggregate":true
-             ,"Compute":true
-             ,"Chart":true
-             ,"Group By":true
-             ,"Pivot":true
             }
            ,"Security":{
               "Escape special characters":true
@@ -527,6 +507,58 @@
       }
     }
   ]
+ ,"Page Items":[
+    {
+      "id":"68501091560991207825"
+     ,"Identification":{
+        "Name":"P4_MINHAS_CONTRIBUICOES"
+       ,"Type":"Caixa de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Somente minhas contribui\u00E7\u00F5es"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Usar Padr\u00F5es":true
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"No Parent"
+       ,"Position":"AFTER_LOGO"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":false
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+  ]
  ,"Buttons":[
     {
       "id":"67758597364457478552"
@@ -601,6 +633,44 @@
          ,"Execution":{
             "Sequence":10
            ,"Event":"Editar Relat\u00F3rio - Caixa de Di\u00E1logo Fechada (67758597663108478553)"
+           ,"Fire When Event Result Is":"True"
+           ,"Fire on Initialization":false
+          }
+        }
+      ]
+    }
+   ,{
+      "id":"68501091680538207826"
+     ,"Identification":{
+        "Name":"Novo"
+      }
+     ,"Execution":{
+        "Sequence":20
+      }
+     ,"When":{
+        "Event":"EVENT.EVENT.BROWSER.CHANGE"
+       ,"Selection Type":"Item(s)"
+       ,"Item(s)":[
+          "P4_MINHAS_CONTRIBUICOES"
+        ]
+      }
+     ,"Execution":{
+        "Event Scope":"Static"
+       ,"Type":"Immediate"
+      }
+     ,"Actions":[
+        {
+          "id":"68501091799403207827"
+         ,"Identification":{
+            "Action":"Atualizar"
+          }
+         ,"Affected Elements":{
+            "Selection Type":"Region"
+           ,"Region":"Assunto (67758594390916478546)"
+          }
+         ,"Execution":{
+            "Sequence":10
+           ,"Event":"Novo (68501091680538207826)"
            ,"Fire When Event Result Is":"True"
            ,"Fire on Initialization":false
           }

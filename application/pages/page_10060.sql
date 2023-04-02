@@ -26,7 +26,7 @@ wwv_flow_imp_page.create_page(
 ,p_help_text=>unistr('Todo texto de ajuda do aplicativo pode ser acessado nesta p\00E1gina. Os links da regi\00E3o "Documenta\00E7\00E3o" fornecem uma explica\00E7\00E3o mais detalhada das funcionalidades do aplicativo.')
 ,p_page_component_map=>'11'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230401003113'
+,p_last_upd_yyyymmddhh24miss=>'20230402133823'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67705224680389023937)
@@ -35,6 +35,14 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_template=>wwv_flow_imp.id(67704905676247022504)
 ,p_plug_display_sequence=>20
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<p><b>- Data 02/04/2023 -></b> Nova funcionalidade:<br>',
+unistr('    1 - Foi implementado uma op\00E7\00E3o na tela de Assuntos de selecionar somente as suas contribui\00E7\00F5es.<br><br>'),
+'',
+'<p><b>- Data 01/04/2023 -></b> Novas funcionalidades:<br>',
+unistr('    1 - Agora novos usu\00E1rios podem solicitar acesso ao sistema. O administrador receber\00E1 um aviso e poder\00E1 ativar ou n\00E3o este usu\00E1rio.<br>'),
+unistr('    2 - Na tela de Tipo de assunto foi retirado a coluna com o nome do usu\00E1rio, por motivo de privacidade.<br>'),
+unistr('    3 - Na tela de Assunto foi retirado a coluna com o nome do usu\00E1rio, por motivo de privacidade.<br><br>'),
+'',
 '<p><b>- Data 31/03/2023 -></b> Nova funcionalidade:<br>',
 unistr('    1 - Agora ao incluir um Assunto, voc\00EA poder\00E1 anexar um arquivo, tipos suportados:<br>'),
 '        - PDF<br>',

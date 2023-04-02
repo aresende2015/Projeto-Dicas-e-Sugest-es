@@ -28,7 +28,7 @@ unistr('Selecionando uma das defini\00E7\00F5es dispon\00EDveis, os administrado
 unistr('<p>O acesso a esta p\00E1gina deve ser limitado somente aos Administradores.</p>')))
 ,p_page_component_map=>'25'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230329225609'
+,p_last_upd_yyyymmddhh24miss=>'20230401122010'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67705230536270023941)
@@ -133,26 +133,33 @@ wwv_flow_imp_page.create_page_plug(
 ,p_region_css_classes=>'margin-sm'
 ,p_region_template_options=>'#DEFAULT#:t-Alert--colorBG:t-Alert--horizontal:t-Alert--noIcon:t-Alert--warning:t-Alert--accessibleHeading'
 ,p_component_template_options=>'#DEFAULT#'
-,p_escape_on_http_output=>'Y'
 ,p_plug_template=>wwv_flow_imp.id(67704872010766022484)
 ,p_plug_display_sequence=>10
 ,p_function_body_language=>'PLSQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'declare',
 '    l_acl_scope varchar2(45);',
+'    l_msg varchar2(2000);',
 'begin',
 '    l_acl_scope := apex_app_setting.get_value( p_name => ''ACCESS_CONTROL_SCOPE'' );',
 '',
 '    if l_acl_scope = ''ALL_USERS'' then',
-'        return apex_lang.message(''APEX.FEATURE.ACL.INFO.ALL_USERS'');',
+'        l_msg := apex_lang.message(''APEX.FEATURE.ACL.INFO.ALL_USERS''); ',
+'        --return apex_lang.message(''APEX.FEATURE.ACL.INFO.ALL_USERS'');',
 '    elsif l_acl_scope = ''ACL_ONLY'' then',
-'        return apex_lang.message(''APEX.FEATURE.ACL.INFO.ACL_ONLY'');',
+'        l_msg := apex_lang.message(''APEX.FEATURE.ACL.INFO.ACL_ONLY'');  ',
+'        --return apex_lang.message(''APEX.FEATURE.ACL.INFO.ACL_ONLY'');',
 '    else',
-'        return apex_lang.message(''APEX.FEATURE.ACL.INFO.ACL_VALUE_INVALID'', l_acl_scope);',
+'        l_msg := apex_lang.message(''APEX.FEATURE.ACL.INFO.ACL_VALUE_INVALID'', l_acl_scope); ',
+'        --return apex_lang.message(''APEX.FEATURE.ACL.INFO.ACL_VALUE_INVALID'', l_acl_scope);',
 '    end if;',
+'',
+'    select l_msg into :P10000_EXIBIR_MSG from dual;',
+'',
 'end;'))
 ,p_plug_source_type=>'NATIVE_DYNAMIC_CONTENT'
 ,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 );
 wwv_flow_imp_page.create_report_region(
  p_id=>wwv_flow_imp.id(67705240203925023947)
@@ -302,6 +309,20 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'EDIT'
 ,p_button_redirect_url=>'f?p=&APP_ID.:10042:&APP_SESSION.::&DEBUG.:RP,10042::'
 ,p_icon_css_classes=>'fa-user-plus'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(67757397174969816545)
+,p_name=>'P10000_EXIBIR_MSG'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(67705239860935023947)
+,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_field_template=>wwv_flow_imp.id(67705013336490022559)
+,p_item_css_classes=>'margin-sm'
+,p_item_template_options=>'#DEFAULT#:margin-top-none:margin-bottom-none:margin-left-none:margin-right-none'
+,p_attribute_01=>'N'
+,p_attribute_02=>'VALUE'
+,p_attribute_04=>'N'
+,p_attribute_05=>'PLAIN'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(67705243976866024171)

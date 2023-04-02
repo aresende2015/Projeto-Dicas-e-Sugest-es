@@ -40,7 +40,7 @@ unistr('<p>Para o relat\00F3rio interativo, use o campo de pesquisa ou selecione
 ||unistr('s exibidas/ocultas, linhas por p\00E1gina e assim por diante. Clique no bot\00E3o <strong>Redefinir</strong> para redefinir o relat\00F3rio interativo de volta \00E0s defini\00E7\00F5es padr\00E3o.</p>')))
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230329225558'
+,p_last_upd_yyyymmddhh24miss=>'20230401121306'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67705123532160023304)
@@ -409,7 +409,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P10031_VIEW_AS'
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_imp.id(67705123633648023304)
-,p_item_default=>'REPORT'
 ,p_prompt=>'Exibir Como'
 ,p_source=>'REPORT'
 ,p_source_type=>'STATIC'
@@ -423,7 +422,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_01=>'2'
 ,p_attribute_02=>'SUBMIT'
 ,p_attribute_03=>'Y'
-,p_attribute_05=>'N'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(67705124219048023304)

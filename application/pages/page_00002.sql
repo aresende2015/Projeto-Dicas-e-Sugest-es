@@ -17,13 +17,13 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'TIPO-DE-ASSUNTO-GRID'
 ,p_step_title=>'Tipo de Assunto'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(67715997561132460019)
+,p_group_id=>wwv_flow_imp.id(67721759424398765653)
 ,p_page_template_options=>'#DEFAULT#'
 ,p_required_role=>wwv_flow_imp.id(67705046243333022626)
 ,p_protection_level=>'C'
 ,p_page_component_map=>'03'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230331011615'
+,p_last_upd_yyyymmddhh24miss=>'20230401214605'
 );
 wwv_flow_imp_page.create_report_region(
  p_id=>wwv_flow_imp.id(67715439377698936269)
@@ -55,7 +55,7 @@ wwv_flow_imp_page.create_report_columns(
 ,p_query_column_id=>1
 ,p_column_alias=>'ID'
 ,p_column_display_sequence=>0
-,p_use_as_row_header=>'N'
+,p_use_as_row_header=>'Y'
 ,p_column_link=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:RP,:P3_ID,P3_ACAO:\#ID#\,2'
 ,p_column_linktext=>'<span aria-label="Editar"><span class="fa fa-edit" aria-hidden="true" title="Editar"></span></span>'
 ,p_column_alignment=>'CENTER'
@@ -93,11 +93,8 @@ wwv_flow_imp_page.create_report_columns(
 ,p_query_column_id=>4
 ,p_column_alias=>'USUARIO'
 ,p_column_display_sequence=>22
-,p_column_heading=>'Usuario'
-,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
+,p_hidden_column=>'Y'
 ,p_derived_column=>'N'
-,p_include_in_export=>'Y'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67715442300454936301)

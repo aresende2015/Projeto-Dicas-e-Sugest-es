@@ -10,7 +10,6 @@
   }
  ,"Availability":{
     "Status":"Available with Developer Toolbar"
-   ,"Global Notification Message":"Obrigado a todos pela contribui\u00E7\u00E3o. Vlw Pedro Paulo e Montezi."
    ,"Build Status":"Run and Build Application"
   }
  ,"Error Handling":{
@@ -50,6 +49,7 @@
    ,"HTML Escaping Mode":"Extended"
    ,"Runtime API Usage":[
       "Modify This Application"
+     ,"Modify Workspace Repository"
     ]
   }
  ,"Database Session":{

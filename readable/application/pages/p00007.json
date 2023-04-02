@@ -1,10 +1,10 @@
 {
-  "id":"2"
+  "id":"7"
  ,"Identification":{
-    "Name":"TIPO DE ASSUNTO - GRID"
-   ,"Alias":"TIPO-DE-ASSUNTO-GRID"
-   ,"Title":"Tipo de Assunto"
-   ,"Page Group":"Assunto (67721759424398765653)"
+    "Name":"USUARIO_SOLICITADO"
+   ,"Alias":"USUARIO-SOLICITADO"
+   ,"Title":"USUARIO_SOLICITADO"
+   ,"Page Group":"Login (67706746284689092430)"
   }
  ,"Appearance":{
     "Page Mode":"Normal"
@@ -21,7 +21,7 @@
    ,"Warn on Unsaved Changes":true
   }
  ,"Security":{
-    "Authorization Scheme":"Direitos do Leitor (67705046243333022626)"
+    "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
    ,"Authentication":"Page Requires Authentication"
    ,"Deep Linking":"Application Default"
    ,"Page Access Protection":"Arguments Must Have Checksum"
@@ -40,17 +40,18 @@
   }
  ,"Regions":[
     {
-      "id":"67715439377698936269"
+      "id":"68562483367695751154"
      ,"Identification":{
-        "Title":"Tipos de Assuntos"
+        "Title":"USUARIO_SOLICITADO"
        ,"Type":"Relat\u00F3rio Cl\u00E1ssico"
       }
      ,"Source":{
         "Location":"Local Database"
        ,"Type":"Table \/ View"
        ,"Table Owner":"Parsing Schema"
-       ,"Table Name":"TDOW_TIPO_ASSUNTO"
+       ,"Table Name":"TDOW_USUARIO"
        ,"Include ROWID Column":false
+       ,"Where Clause":"ATIVO = \u0027N\u0027"
       }
      ,"Order By":{
         "Type":"None"
@@ -135,7 +136,7 @@
       }
      ,"Columns":[
         {
-          "id":"67715439760520936272"
+          "id":"68562483858378751163"
          ,"Identification":{
             "Column Name":"ID"
            ,"Type":"Link"
@@ -148,16 +149,15 @@
            ,"Column Alignment":"center"
           }
          ,"Accessibility":{
-            "Value Identifies Row":true
+            "Value Identifies Row":false
           }
          ,"Link":{
             "Target":{
-              "url":"f?p=\u0026APP_ID.:3:\u0026SESSION.::\u0026DEBUG.:RP,:P3_ID,P3_ACAO:\u005C#ID#\u005C,2"
-             ,"Page":"3"
+              "url":"f?p=\u0026APP_ID.:8:\u0026APP_SESSION.::\u0026DEBUG.:RP:P8_ID:\u005C#ID#\u005C"
+             ,"Page":"8"
              ,"Clear Cache":"RP"
              ,"Values":{
-                "P3_ID":"#ID#"
-               ,"P3_ACAO":"2"
+                "P8_ID":"#ID#"
               }
             }
            ,"Link Text":"\u003Cspan aria-label=\"Editar\"\u003E\u003Cspan class=\"fa fa-edit\" aria-hidden=\"true\" title=\"Editar\"\u003E\u003C\/span\u003E\u003C\/span\u003E"
@@ -175,18 +175,17 @@
             "Table Owner":"Parsing Schema"
           }
          ,"Security":{
-            "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
-           ,"Escape special characters":true
+            "Escape special characters":true
           }
         }
        ,{
-          "id":"67715440139722936272"
+          "id":"68562484232037751163"
          ,"Identification":{
-            "Column Name":"DSC_TIPO_ASSUNTO"
+            "Column Name":"LOGIN"
            ,"Type":"Plain Text"
           }
          ,"Heading":{
-            "Heading":"Tipo de Assunto"
+            "Heading":"Login"
            ,"Alignment":"start"
           }
          ,"Layout":{
@@ -213,25 +212,21 @@
           }
         }
        ,{
-          "id":"67757395982122816533"
+          "id":"68562485087173751164"
          ,"Identification":{
-            "Column Name":"ATIVO"
-           ,"Type":"Plain Text (based on List of Values)"
+            "Column Name":"EMAIL"
+           ,"Type":"Plain Text"
           }
          ,"Heading":{
-            "Heading":"Ativo"
-           ,"Alignment":"center"
+            "Heading":"Email"
+           ,"Alignment":"start"
           }
          ,"Layout":{
-            "Sequence":12
+            "Sequence":4
            ,"Column Alignment":"start"
           }
          ,"Accessibility":{
             "Value Identifies Row":false
-          }
-         ,"List of Values":{
-            "Type":"Shared Component"
-           ,"List of Values":"ATIVO (68119960338656260488)"
           }
          ,"Sorting":{
             "Sortable":true
@@ -249,166 +244,12 @@
             "Escape special characters":true
           }
         }
-       ,{
-          "id":"67757396032579816534"
-         ,"Identification":{
-            "Column Name":"USUARIO"
-           ,"Type":"Hidden Column"
-          }
-         ,"Layout":{
-            "Sequence":22
-          }
-         ,"UI Defaults Reference":{
-            "Table Owner":"Parsing Schema"
-          }
-         ,"Security":{
-            "Escape special characters":true
-          }
-        }
       ]
-    }
-   ,{
-      "id":"67715442300454936301"
-     ,"Identification":{
-        "Title":"Breadcrumb"
-       ,"Type":"Breadcrumb"
-      }
-     ,"Source":{
-        "Breadcrumb":"Breadcrumb (67704840567774022465)"
-      }
-     ,"Layout":{
-        "Sequence":10
-       ,"Parent Region":"No Parent"
-       ,"Position":"REGION_POSITION_01"
-       ,"Start New Layout":false
-       ,"Start New Row":true
-       ,"Column":"Automatic"
-       ,"New Column":true
-       ,"Column Span":"Automatic"
-      }
-     ,"Appearance":{
-        "Template":"Title Bar (67704955690288022528)"
-       ,"Template Options":[
-          "#DEFAULT#"
-         ,"t-BreadcrumbRegion--useBreadcrumbTitle"
-        ]
-       ,"Render Components":"Above Content"
-      }
-     ,"Accessibility":{
-        "Use Landmark":true
-       ,"Landmark Type":"Template Default"
-      }
-     ,"Advanced":{
-        "Region Display Selector":false
-       ,"Exclude Title from Translation":false
-      }
-     ,"Server-side Condition":{
-        "Type":"Never"
-      }
-     ,"Server Cache":{
-        "Caching":"Disabled"
-      }
-     ,"Customization":{
-        "Customizable":"Not Customizable By End Users"
-      }
-     ,"Attributes":{
-        "Appearance":{
-          "Breadcrumb Template":"Breadcrumb (67705017758498022562)"
-         ,"Template Options":[
-            "#DEFAULT#"
-          ]
-        }
-      }
-    }
-  ]
- ,"Buttons":[
-    {
-      "id":"67715440602863936272"
-     ,"Identification":{
-        "Button Name":"CREATE"
-       ,"Label":"Criar"
-      }
-     ,"Layout":{
-        "Sequence":20
-       ,"Region":"Tipos de Assuntos (67715439377698936269)"
-       ,"Position":"EDIT"
-       ,"Start New Layout":false
-       ,"Start New Row":true
-       ,"Column":"Automatic"
-       ,"New Column":true
-       ,"Column Span":"Automatic"
-      }
-     ,"Appearance":{
-        "Button Template":"Text (67705016182814022561)"
-       ,"Hot":true
-       ,"Template Options":[
-          "#DEFAULT#"
-        ]
-      }
-     ,"Behavior":{
-        "Action":"Redirect to Page in this Application"
-       ,"Target":{
-          "url":"f?p=\u0026APP_ID.:3:\u0026SESSION.::\u0026DEBUG.:3:P3_ATIVO,P3_USUARIO,P3_ACAO:Y,\u0026APP_USER.,1"
-         ,"Page":"3"
-         ,"Clear Cache":"3"
-         ,"Values":{
-            "P3_ATIVO":"Y"
-           ,"P3_USUARIO":"\u0026APP_USER."
-           ,"P3_ACAO":"1"
-          }
-        }
-       ,"Warn on Unsaved Changes":"Do Not Check"
-      }
-     ,"Security":{
-        "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
-      }
-    }
-   ,{
-      "id":"67757396110301816535"
-     ,"Identification":{
-        "Button Name":"CREATE_INATIVO"
-       ,"Label":"Sugest\u00E3o de Tipos"
-      }
-     ,"Layout":{
-        "Sequence":10
-       ,"Region":"Tipos de Assuntos (67715439377698936269)"
-       ,"Position":"EDIT"
-       ,"Start New Layout":false
-       ,"Start New Row":true
-       ,"Column":"Automatic"
-       ,"New Column":true
-       ,"Column Span":"Automatic"
-      }
-     ,"Appearance":{
-        "Button Template":"Text (67705016182814022561)"
-       ,"Hot":false
-       ,"Template Options":[
-          "#DEFAULT#"
-         ,"t-Button--primary"
-        ]
-      }
-     ,"Behavior":{
-        "Action":"Redirect to Page in this Application"
-       ,"Target":{
-          "url":"f?p=\u0026APP_ID.:3:\u0026SESSION.::\u0026DEBUG.:3:P3_ATIVO,P3_USUARIO,P3_ACAO:N,\u0026APP_USER.,1"
-         ,"Page":"3"
-         ,"Clear Cache":"3"
-         ,"Values":{
-            "P3_ATIVO":"N"
-           ,"P3_USUARIO":"\u0026APP_USER."
-           ,"P3_ACAO":"1"
-          }
-        }
-       ,"Warn on Unsaved Changes":"Do Not Check"
-      }
-     ,"Security":{
-        "Authorization Scheme":"Direitos do Leitor (67705046243333022626)"
-      }
     }
   ]
  ,"Dynamic Actions":[
     {
-      "id":"67715440914260936273"
+      "id":"68562486277419751164"
      ,"Identification":{
         "Name":"Editar Relat\u00F3rio - Caixa de Di\u00E1logo Fechada"
       }
@@ -418,7 +259,7 @@
      ,"When":{
         "Event":"EVENT.EVENT.FAMEWORK.APEXAFTERCLOSEDIALOG"
        ,"Selection Type":"Region"
-       ,"Region":"Tipos de Assuntos (67715439377698936269)"
+       ,"Region":"USUARIO_SOLICITADO (68562483367695751154)"
       }
      ,"Execution":{
         "Event Scope":"Static"
@@ -426,17 +267,17 @@
       }
      ,"Actions":[
         {
-          "id":"67715441429388936273"
+          "id":"68562486777640751165"
          ,"Identification":{
             "Action":"Atualizar"
           }
          ,"Affected Elements":{
             "Selection Type":"Region"
-           ,"Region":"Tipos de Assuntos (67715439377698936269)"
+           ,"Region":"USUARIO_SOLICITADO (68562483367695751154)"
           }
          ,"Execution":{
             "Sequence":10
-           ,"Event":"Editar Relat\u00F3rio - Caixa de Di\u00E1logo Fechada (67715440914260936273)"
+           ,"Event":"Editar Relat\u00F3rio - Caixa de Di\u00E1logo Fechada (68562486277419751164)"
            ,"Fire When Event Result Is":"True"
            ,"Fire on Initialization":false
           }

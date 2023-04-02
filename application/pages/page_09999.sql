@@ -26,7 +26,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'12'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230329230816'
+,p_last_upd_yyyymmddhh24miss=>'20230401181830'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67705048219732022633)
@@ -53,6 +53,19 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_alignment=>'LEFT'
 ,p_grid_new_row=>'Y'
 ,p_grid_new_column=>'Y'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(67757397340018816547)
+,p_button_sequence=>50
+,p_button_plug_id=>wwv_flow_imp.id(67705048219732022633)
+,p_button_name=>'Solicitar_acesso'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#:t-Button--large:t-Button--primary:t-Button--link'
+,p_button_template_id=>wwv_flow_imp.id(67705016182814022561)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Solicitar acesso'
+,p_button_position=>'NEXT'
+,p_button_redirect_url=>'f?p=&APP_ID.:6:&SESSION.::&DEBUG.:CR,6::'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(67705048732808022634)

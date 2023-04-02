@@ -22,7 +22,7 @@
         }
        ,"Link":{
           "Target":{
-            "url":"f?p=\u0026APP_ID.:1:\u0026APP_SESSION.::\u0026DEBUG.:::"
+            "url":"f?p=\u0026APP_ID.:1:\u0026SESSION.::\u0026DEBUG.::::"
            ,"Page":"1"
           }
         }
@@ -31,6 +31,9 @@
         }
        ,"User Defined Attributes":{
           "Translatable":false
+        }
+       ,"Security":{
+          "Authorization Scheme":"Direitos do Leitor (67705046243333022626)"
         }
       }
      ,{
@@ -83,7 +86,7 @@
         }
        ,"Link":{
           "Target":{
-            "url":"f?p=\u0026APP_ID.:2:\u0026APP_SESSION.::\u0026DEBUG.:::"
+            "url":"f?p=\u0026APP_ID.:2:\u0026SESSION.::\u0026DEBUG.::::"
            ,"Page":"2"
           }
         }
@@ -92,6 +95,9 @@
         }
        ,"User Defined Attributes":{
           "Translatable":false
+        }
+       ,"Security":{
+          "Authorization Scheme":"Direitos do Leitor (67705046243333022626)"
         }
       }
      ,{
@@ -114,7 +120,7 @@
         }
        ,"Link":{
           "Target":{
-            "url":"f?p=\u0026APP_ID.:4:\u0026APP_SESSION.::\u0026DEBUG.:::"
+            "url":"f?p=\u0026APP_ID.:4:\u0026SESSION.::\u0026DEBUG.::::"
            ,"Page":"4"
           }
         }
@@ -123,6 +129,9 @@
         }
        ,"User Defined Attributes":{
           "Translatable":false
+        }
+       ,"Security":{
+          "Authorization Scheme":"Direitos do Leitor (67705046243333022626)"
         }
       }
     ]
@@ -380,6 +389,41 @@
         }
        ,"User Defined Attributes":{
           "Translatable":false
+        }
+      }
+     ,{
+        "id":"68561181407200220681"
+       ,"Label":{
+          "Label":"Novos usu\u00E1rios"
+        }
+       ,"Icon":{
+          "Image\/Icon CSS Classes":"fa-emoji-no-mouth"
+        }
+       ,"Layout":{
+          "Sequence":5
+        }
+       ,"Is Current":{
+          "Type":"Target Page"
+        }
+       ,"Link":{
+          "Target":{
+            "url":"f?p=\u0026APP_ID.:7:\u0026SESSION.::\u0026DEBUG.:RP,7:::"
+           ,"Page":"7"
+           ,"Clear Cache":"RP,7"
+          }
+        }
+       ,"Click Counting":{
+          "Count Clicks":false
+        }
+       ,"User Defined Attributes":{
+          "Translatable":false
+        }
+       ,"Server-side Condition":{
+          "Type":"Rows returned"
+         ,"SQL Query":"SELECT 1 FROM TDOW_USUARIO WHERE ATIVO = \u0027N\u0027;"
+        }
+       ,"Security":{
+          "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
         }
       }
     ]

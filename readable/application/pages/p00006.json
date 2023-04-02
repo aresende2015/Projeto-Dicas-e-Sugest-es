@@ -1,0 +1,472 @@
+{
+  "id":"6"
+ ,"Identification":{
+    "Name":"Solicitar acesso"
+   ,"Alias":"SOLICITAR-ACESSO"
+   ,"Title":"Solicitar acesso"
+   ,"Page Group":"Login (67706746284689092430)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Normal"
+   ,"Page Template":"Theme Default"
+   ,"Template Options":[
+      "#DEFAULT#"
+    ]
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"Do not focus cursor"
+   ,"Warn on Unsaved Changes":true
+  }
+ ,"Security":{
+    "Authentication":"Page Is Public"
+  }
+ ,"Advanced":{
+    "Enable Meta Tags":false
+  }
+ ,"Security":{
+    "Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Disabled"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Regions":[
+    {
+      "id":"68501089525216207805"
+     ,"Identification":{
+        "Title":"Solicita\u00E7\u00E3o de novo acesso"
+       ,"Type":"Conte\u00FAdo Est\u00E1tico"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Standard (67704943297290022523)"
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"t-Region--scrollBody"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":true
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Formato do Relat\u00F3rio":"HTML"
+         ,"Expandir Atalhos":false
+        }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67757397472916816548"
+     ,"Identification":{
+        "Name":"P6_LOGIN"
+       ,"Type":"Campo de Texto"
+      }
+     ,"Label":{
+        "Label":"Login"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Subtipo":"Text"
+       ,"Remover Espa\u00E7os":"Leading and Trailing"
+       ,"Formata\u00E7\u00E3o de Mai\u00FAsculas\/Min\u00FAsculas do Texto":"SEM ALTERA\u00C7\u00C3O"
+       ,"Submeter ao pressionar Enter":false
+       ,"Desativado":false
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Region":"Solicita\u00E7\u00E3o de novo acesso (68501089525216207805)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":20
+      }
+     ,"Validation":{
+        "Value Required":true
+       ,"Maximum Length":20
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"67757397589271816549"
+     ,"Identification":{
+        "Name":"P6_SENHA"
+       ,"Type":"Senha"
+      }
+     ,"Label":{
+        "Label":"Senha"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Submeter ao pressionar Enter":false
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Region":"Solicita\u00E7\u00E3o de novo acesso (68501089525216207805)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":20
+      }
+     ,"Validation":{
+        "Value Required":true
+       ,"Maximum Length":20
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"68501089301874207803"
+     ,"Identification":{
+        "Name":"P6_EMAIL"
+       ,"Type":"Campo de Texto"
+      }
+     ,"Label":{
+        "Label":"Email"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Subtipo":"E-Mail"
+       ,"Remover Espa\u00E7os":"Leading and Trailing"
+       ,"Formata\u00E7\u00E3o de Mai\u00FAsculas\/Min\u00FAsculas do Texto":"SEM ALTERA\u00C7\u00C3O"
+       ,"Submeter ao pressionar Enter":true
+       ,"Desativado":false
+      }
+     ,"Layout":{
+        "Sequence":50
+       ,"Region":"Solicita\u00E7\u00E3o de novo acesso (68501089525216207805)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":100
+      }
+     ,"Validation":{
+        "Value Required":true
+       ,"Maximum Length":100
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Quick Picks":{
+        "Show Quick Picks":false
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"68501089498115207804"
+     ,"Identification":{
+        "Name":"P6_SENHA_CONFIRMAR"
+       ,"Type":"Senha"
+      }
+     ,"Label":{
+        "Label":"Confirmar senha"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Submeter ao pressionar Enter":false
+      }
+     ,"Layout":{
+        "Sequence":40
+       ,"Region":"Solicita\u00E7\u00E3o de novo acesso (68501089525216207805)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Width":20
+      }
+     ,"Validation":{
+        "Value Required":true
+       ,"Maximum Length":20
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"68501089999217207809"
+     ,"Identification":{
+        "Name":"P6_STATUS"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":false
+      }
+     ,"Layout":{
+        "Sequence":60
+       ,"Region":"Solicita\u00E7\u00E3o de novo acesso (68501089525216207805)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Ignore"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+  ]
+ ,"Buttons":[
+    {
+      "id":"67757397618719816550"
+     ,"Identification":{
+        "Button Name":"Solicitar_acesso"
+       ,"Label":"Solicitar Acesso"
+      }
+     ,"Layout":{
+        "Sequence":60
+       ,"Region":"Solicita\u00E7\u00E3o de novo acesso (68501089525216207805)"
+       ,"Position":"CREATE"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Button Template":"Text (67705016182814022561)"
+       ,"Hot":true
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Behavior":{
+        "Action":"Submit Page"
+       ,"Execute Validations":true
+       ,"Warn on Unsaved Changes":"Do Not Check"
+      }
+    }
+  ]
+ ,"Validations":[
+    {
+      "id":"68501090315830207813"
+     ,"Identification":{
+        "Name":"Valida se a senha e a confirma\u00E7\u00E3o s\u00E3o id\u00EAnticas"
+      }
+     ,"Execution":{
+        "Sequence":20
+      }
+     ,"Validation":{
+        "Type":"Expression"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Expression":":P6_SENHA = :P6_SENHA_CONFIRMAR"
+       ,"Always Execute":false
+      }
+     ,"Error":{
+        "Error Message":"A confirma\u00E7\u00E3o da senha \u00E9 diferente da senha."
+       ,"Display Location":"Inline with Field and in Notification"
+      }
+     ,"Server-side Condition":{
+        "When Button Pressed":"Solicitar_acesso (67757397618719816550)"
+      }
+    }
+   ,{
+      "id":"68501090967536207819"
+     ,"Identification":{
+        "Name":"Valida o Login"
+      }
+     ,"Execution":{
+        "Sequence":10
+      }
+     ,"Validation":{
+        "Type":"PL\/SQL Error"
+       ,"PL\/SQL Code raising Error":"declare\n    retorno number;\nbegin\n\n    select count(1) into retorno from APEX_APPL_ACL_USERS where USER_NAME = trim(upper(:P6_LOGIN));\n\n    if retorno \u003E 0 then\n        raise_application_error( -20000, \u0027Usu\u00E1rio \u0027 || :P6_LOGIN || \u0027 j\u00E1 existe.\u0027 );\n    else\n        select count(1) into retorno from TDOW_USUARIO where trim(upper(LOGIN)) = trim(upper(:P6_LOGIN));\n        if retorno \u003E 0 then\n            raise_application_error( -20001, \u0027Usu\u00E1rio \u0027 || :P6_LOGIN || \u0027 j\u00E1 foi usado.\u0027 );\n        end if;\n    end if;\n\nend;"
+       ,"Always Execute":false
+      }
+     ,"Error":{
+        "Error Message":"Usu\u00E1rio j\u00E1 existe."
+       ,"Display Location":"Inline with Field"
+       ,"Associated Item":"P6_LOGIN (67757397472916816548)"
+      }
+     ,"Server-side Condition":{
+        "When Button Pressed":"Solicitar_acesso (67757397618719816550)"
+      }
+    }
+  ]
+ ,"Processes":[
+    {
+      "id":"68501090521420207815"
+     ,"Identification":{
+        "Name":"Criar usu\u00E1rio"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"BEGIN\n    --APEX_UTIL.CREATE_USER(\n    --    p_user_name                     =\u003E :P6_LOGIN,\n    --    p_email_address                 =\u003E :P6_EMAIL,\n    --    p_web_password                  =\u003E :P6_SENHA,\n    --    p_default_schema                =\u003E \u0027WKSP_ARESENDE\u0027,\n    --    p_change_password_on_first_use  =\u003E \u0027N\u0027);\n\n    INSERT INTO APEX_APPL_ACL_USERS (\n                    WORKSPACE_ID, \n                    WORKSPACE, \n                    WORKSPACE_DISPLAY_NAME, \n                    APPLICATION_ID,  \n                    APPLICATION_NAME, \n                    USER_NAME, \n                    USER_NAME_LC, \n                    ROLE_IDS, \n                    ROLE_NAMES\n    ) VALUES (\n            56329041776944656426, \n            \u0027ARESENDE\u0027, \n            \u0027ARESENDE\u0027, \n            181123, \n            \u0027Assuntos e dicas\u0027, \n            :P6_LOGIN, \n            :P6_LOGIN, \n            67705046094335022625, \n            \u0027Leitor\u0027\n    );\n\n    INSERT INTO TDOW_USUARIO (\n        LOGIN,\n        SENHA,\n        EMAIL,\n        ATIVO\n    ) VALUES (\n        :P6_LOGIN,\n        :P6_SENHA,\n        :P6_EMAIL,\n        \u0027N\u0027\n    );\nEND;"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+    }
+  ]
+ ,"Branches":[
+    {
+      "id":"68501090863011207818"
+     ,"Identification":{
+        "Name":"Ir Para P\u00E1gina 9999"
+      }
+     ,"Execution":{
+        "Sequence":10
+       ,"Point":"After Processing"
+      }
+     ,"Behavior":{
+        "Type":"Page or URL (Redirect)"
+       ,"Target":{
+          "url":"f?p=\u0026APP_ID.:9999:\u0026SESSION.::\u0026DEBUG.:CR,9999:P9999_USERNAME:\u0026P6_LOGIN.\u0026success_msg=#SUCCESS_MSG#"
+         ,"Page":"9999"
+         ,"Clear Cache":"CR,9999"
+         ,"Values":{
+            "P9999_USERNAME":"\u0026P6_LOGIN."
+          }
+        }
+      }
+     ,"Server-side Condition":{
+        "When Button Pressed":"Solicitar_acesso (67757397618719816550)"
+      }
+    }
+  ]
+}

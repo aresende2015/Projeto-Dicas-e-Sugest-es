@@ -17,6 +17,17 @@ wwv_flow_imp_shared.create_list(
 ,p_list_status=>'PUBLIC'
 );
 wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(68561181407200220681)
+,p_list_item_display_sequence=>5
+,p_list_item_link_text=>unistr('Novos usu\00E1rios')
+,p_list_item_link_target=>'f?p=&APP_ID.:7:&SESSION.::&DEBUG.:RP,7:::'
+,p_list_item_icon=>'fa-emoji-no-mouth'
+,p_list_item_disp_cond_type=>'EXISTS'
+,p_list_item_disp_condition=>'SELECT 1 FROM TDOW_USUARIO WHERE ATIVO = ''N'';'
+,p_security_scheme=>wwv_flow_imp.id(67705046189535022626)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(67705226283357023939)
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Instalar Aplicativo'

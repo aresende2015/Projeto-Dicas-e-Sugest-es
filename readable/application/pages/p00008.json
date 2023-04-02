@@ -1,17 +1,16 @@
 {
-  "id":"3"
+  "id":"8"
  ,"Identification":{
-    "Name":"TIPO DE ASSUNTO - FORM"
-   ,"Alias":"TIPO-DE-ASSUNTO-FORM"
-   ,"Title":"Tipo de Assunto"
-   ,"Page Group":"Assunto (67721759424398765653)"
+    "Name":"USUARIO_SOLICITADO FORM"
+   ,"Alias":"USUARIO-SOLICITADO-FORM"
+   ,"Title":"USUARIO_SOLICITADO FORM"
+   ,"Page Group":"Login (67706746284689092430)"
   }
  ,"Appearance":{
     "Page Mode":"Modal Dialog"
-   ,"Dialog Template":"Drawer (67704841329733022466)"
+   ,"Dialog Template":"Theme Default"
    ,"Template Options":[
       "#DEFAULT#"
-     ,"js-dialog-class-t-Drawer--pullOutEnd"
     ]
   }
  ,"Dialog":{
@@ -43,16 +42,16 @@
   }
  ,"Regions":[
     {
-      "id":"67715432842202936260"
+      "id":"68562475165555751144"
      ,"Identification":{
-        "Title":"TIPO DE ASSUNTO - FORM"
+        "Title":"USUARIO_SOLICITADO FORM"
        ,"Type":"Form"
       }
      ,"Source":{
         "Location":"Local Database"
        ,"Type":"Table \/ View"
        ,"Table Owner":"Parsing Schema"
-       ,"Table Name":"TDOW_TIPO_ASSUNTO"
+       ,"Table Name":"TDOW_USUARIO"
        ,"Include ROWID Column":false
       }
      ,"Layout":{
@@ -99,7 +98,7 @@
       }
     }
    ,{
-      "id":"67715434574383936262"
+      "id":"68562478945448751148"
      ,"Identification":{
         "Title":"Bot\u00F5es"
        ,"Type":"Conte\u00FAdo Est\u00E1tico"
@@ -145,9 +144,96 @@
   ]
  ,"Page Items":[
     {
-      "id":"67715433120041936261"
+      "id":"68501091130054207821"
      ,"Identification":{
-        "Name":"P3_ID"
+        "Name":"P8_ATIVO"
+       ,"Type":"Caixa de Sele\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Label":"Ativo"
+       ,"Alignment":"Left"
+      }
+     ,"Settings":{
+        "Usar Padr\u00F5es":true
+      }
+     ,"Layout":{
+        "Sequence":60
+       ,"Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Optional - Floating (67705013698096022560)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+      }
+     ,"Validation":{
+        "Value Required":true
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
+       ,"Column":"ATIVO"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":false
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"68501091348943207823"
+     ,"Identification":{
+        "Name":"P8_SENHA"
+       ,"Type":"Oculto"
+      }
+     ,"Settings":{
+        "Valor Protegido":true
+      }
+     ,"Layout":{
+        "Sequence":70
+       ,"Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
+       ,"Position":"BODY"
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
+       ,"Column":"SENHA"
+       ,"Data Type":"VARCHAR2"
+       ,"Query Only":true
+       ,"Primary Key":false
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
+      }
+    }
+   ,{
+      "id":"68562475460625751144"
+     ,"Identification":{
+        "Name":"P8_ID"
        ,"Type":"Oculto"
       }
      ,"Settings":{
@@ -155,14 +241,14 @@
       }
      ,"Layout":{
         "Sequence":10
-       ,"Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
+       ,"Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
        ,"Position":"BODY"
       }
      ,"Advanced":{
         "Warn on Unsaved Changes":"Page Default"
       }
      ,"Source":{
-        "Form Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
+        "Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
        ,"Column":"ID"
        ,"Data Type":"NUMBER"
        ,"Query Only":false
@@ -179,25 +265,24 @@
       }
     }
    ,{
-      "id":"67715433552060936261"
+      "id":"68562475850031751145"
      ,"Identification":{
-        "Name":"P3_DSC_TIPO_ASSUNTO"
-       ,"Type":"Campo de Texto"
+        "Name":"P8_LOGIN"
+       ,"Type":"Somente Exibi\u00E7\u00E3o"
       }
      ,"Label":{
-        "Label":"Tipo de Assunto"
+        "Label":"Login"
        ,"Alignment":"Left"
       }
      ,"Settings":{
-        "Subtipo":"Text"
-       ,"Remover Espa\u00E7os":"None"
-       ,"Formata\u00E7\u00E3o de Mai\u00FAsculas\/Min\u00FAsculas do Texto":"SEM ALTERA\u00C7\u00C3O"
-       ,"Submeter ao pressionar Enter":false
-       ,"Desativado":false
+        "Formato":"Plain Text"
+       ,"Com Base Em":"Item Value"
+       ,"Mostrar Quebras de Linha":true
+       ,"Enviar ao Submeter P\u00E1gina":true
       }
      ,"Layout":{
         "Sequence":20
-       ,"Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
+       ,"Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
        ,"Position":"BODY"
        ,"Alignment":"Left"
        ,"Start New Layout":false
@@ -212,100 +297,35 @@
        ,"Template Options":[
           "#DEFAULT#"
         ]
-       ,"Width":32
-      }
-     ,"Validation":{
-        "Value Required":true
-       ,"Maximum Length":30
       }
      ,"Advanced":{
         "Warn on Unsaved Changes":"Page Default"
       }
      ,"Source":{
-        "Form Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
-       ,"Column":"DSC_TIPO_ASSUNTO"
+        "Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
+       ,"Column":"LOGIN"
        ,"Data Type":"VARCHAR2"
-       ,"Query Only":false
+       ,"Query Only":true
        ,"Primary Key":false
       }
      ,"Session State":{
-        "Storage":"Per Request (Memory Only)"
-      }
-     ,"Quick Picks":{
-        "Show Quick Picks":false
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Request (Memory Only)"
       }
      ,"Security":{
-        "Session State Protection":"Unrestricted"
+        "Session State Protection":"Checksum Required - Session Level"
        ,"Store value encrypted in session state":true
        ,"Restricted Characters":"All characters can be saved."
       }
     }
    ,{
-      "id":"67757395771608816531"
+      "id":"68562476692283751146"
      ,"Identification":{
-        "Name":"P3_ATIVO"
-       ,"Type":"Alternar"
-      }
-     ,"Label":{
-        "Label":"Ativo"
-       ,"Alignment":"Left"
-      }
-     ,"Settings":{
-        "Usar Padr\u00F5es":true
-      }
-     ,"Layout":{
-        "Sequence":30
-       ,"Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
-       ,"Position":"BODY"
-       ,"Alignment":"Left"
-       ,"Start New Layout":false
-       ,"Start New Row":true
-       ,"Column":"Automatic"
-       ,"New Column":true
-       ,"Column Span":"Automatic"
-       ,"Label Column Span":"Page Template Default"
-      }
-     ,"Appearance":{
-        "Template":"Optional - Floating (67705013698096022560)"
-       ,"Template Options":[
-          "#DEFAULT#"
-        ]
-      }
-     ,"Validation":{
-        "Value Required":false
-      }
-     ,"Advanced":{
-        "Warn on Unsaved Changes":"Page Default"
-      }
-     ,"Source":{
-        "Form Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
-       ,"Column":"ATIVO"
-       ,"Data Type":"VARCHAR2"
-       ,"Query Only":false
-       ,"Primary Key":false
-      }
-     ,"Session State":{
-        "Storage":"Per Request (Memory Only)"
-      }
-     ,"Read Only":{
-        "Type":"Expression"
-       ,"Language":"PL\/SQL"
-       ,"PL\/SQL Expression":"(:P3_ATIVO = \u0027N\u0027 AND :P3_ACAO = 1)"
-      }
-     ,"Security":{
-        "Session State Protection":"Unrestricted"
-       ,"Store value encrypted in session state":true
-       ,"Restricted Characters":"All characters can be saved."
-      }
-    }
-   ,{
-      "id":"67757395875643816532"
-     ,"Identification":{
-        "Name":"P3_USUARIO"
+        "Name":"P8_EMAIL"
        ,"Type":"Somente Exibi\u00E7\u00E3o"
       }
      ,"Label":{
-        "Label":"Novo"
+        "Label":"Email"
        ,"Alignment":"Left"
       }
      ,"Settings":{
@@ -315,8 +335,8 @@
        ,"Enviar ao Submeter P\u00E1gina":true
       }
      ,"Layout":{
-        "Sequence":50
-       ,"Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
+        "Sequence":40
+       ,"Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
        ,"Position":"BODY"
        ,"Alignment":"Left"
        ,"Start New Layout":false
@@ -327,7 +347,7 @@
        ,"Label Column Span":"Page Template Default"
       }
      ,"Appearance":{
-        "Template":"Optional - Floating (67705013698096022560)"
+        "Template":"Required - Floating (67705014904991022560)"
        ,"Template Options":[
           "#DEFAULT#"
         ]
@@ -336,10 +356,10 @@
         "Warn on Unsaved Changes":"Page Default"
       }
      ,"Source":{
-        "Form Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
-       ,"Column":"USUARIO"
+        "Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
+       ,"Column":"EMAIL"
        ,"Data Type":"VARCHAR2"
-       ,"Query Only":false
+       ,"Query Only":true
        ,"Primary Key":false
       }
      ,"Session State":{
@@ -352,48 +372,17 @@
        ,"Restricted Characters":"All characters can be saved."
       }
     }
-   ,{
-      "id":"67757396666046816540"
-     ,"Identification":{
-        "Name":"P3_ACAO"
-       ,"Type":"Oculto"
-      }
-     ,"Settings":{
-        "Valor Protegido":true
-      }
-     ,"Layout":{
-        "Sequence":60
-       ,"Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
-       ,"Position":"BODY"
-      }
-     ,"Advanced":{
-        "Warn on Unsaved Changes":"Page Default"
-      }
-     ,"Source":{
-        "Type":"Null"
-       ,"Used":"Only when current value in session state is null"
-      }
-     ,"Session State":{
-        "Data Type":"VARCHAR2"
-       ,"Storage":"Per Session (Persistent)"
-      }
-     ,"Security":{
-        "Session State Protection":"Unrestricted"
-       ,"Store value encrypted in session state":true
-       ,"Restricted Characters":"All characters can be saved."
-      }
-    }
   ]
  ,"Buttons":[
     {
-      "id":"67715434948004936265"
+      "id":"68562479345624751151"
      ,"Identification":{
         "Button Name":"CANCEL"
        ,"Label":"Cancelar"
       }
      ,"Layout":{
         "Sequence":10
-       ,"Region":"Bot\u00F5es (67715434574383936262)"
+       ,"Region":"Bot\u00F5es (68562478945448751148)"
        ,"Position":"CLOSE"
        ,"Start New Layout":false
        ,"Start New Row":true
@@ -414,52 +403,14 @@
       }
     }
    ,{
-      "id":"67715436392491936266"
-     ,"Identification":{
-        "Button Name":"DELETE"
-       ,"Label":"Excluir"
-      }
-     ,"Layout":{
-        "Sequence":20
-       ,"Region":"Bot\u00F5es (67715434574383936262)"
-       ,"Position":"DELETE"
-       ,"Start New Layout":false
-       ,"Start New Row":true
-       ,"Column":"Automatic"
-       ,"New Column":true
-       ,"Column Span":"Automatic"
-      }
-     ,"Appearance":{
-        "Button Template":"Text (67705016182814022561)"
-       ,"Hot":false
-       ,"Template Options":[
-          "#DEFAULT#"
-        ]
-      }
-     ,"Behavior":{
-        "Action":"Submit Page"
-       ,"Execute Validations":false
-       ,"Warn on Unsaved Changes":"Do Not Check"
-       ,"Database Action":"SQL DELETE action"
-      }
-     ,"Confirmation":{
-        "Message":"\u0026APP_TEXT$DELETE_MSG!RAW."
-       ,"Style":"Danger"
-      }
-     ,"Server-side Condition":{
-        "Type":"Item is NOT NULL"
-       ,"Item":"P3_ID"
-      }
-    }
-   ,{
-      "id":"67715436716209936267"
+      "id":"68562481178850751152"
      ,"Identification":{
         "Button Name":"SAVE"
-       ,"Label":"Aplicar Altera\u00E7\u00F5es"
+       ,"Label":"Ativar usu\u00E1rio"
       }
      ,"Layout":{
         "Sequence":30
-       ,"Region":"Bot\u00F5es (67715434574383936262)"
+       ,"Region":"Bot\u00F5es (68562478945448751148)"
        ,"Position":"NEXT"
        ,"Start New Layout":false
        ,"Start New Row":true
@@ -482,47 +433,13 @@
       }
      ,"Server-side Condition":{
         "Type":"Item is NOT NULL"
-       ,"Item":"P3_ID"
-      }
-    }
-   ,{
-      "id":"67715437173578936267"
-     ,"Identification":{
-        "Button Name":"CREATE"
-       ,"Label":"Criar"
-      }
-     ,"Layout":{
-        "Sequence":40
-       ,"Region":"Bot\u00F5es (67715434574383936262)"
-       ,"Position":"NEXT"
-       ,"Start New Layout":false
-       ,"Start New Row":true
-       ,"Column":"Automatic"
-       ,"New Column":true
-       ,"Column Span":"Automatic"
-      }
-     ,"Appearance":{
-        "Button Template":"Text (67705016182814022561)"
-       ,"Hot":true
-       ,"Template Options":[
-          "#DEFAULT#"
-        ]
-      }
-     ,"Behavior":{
-        "Action":"Submit Page"
-       ,"Execute Validations":true
-       ,"Warn on Unsaved Changes":"Do Not Check"
-       ,"Database Action":"SQL INSERT action"
-      }
-     ,"Server-side Condition":{
-        "Type":"Item is NULL"
-       ,"Item":"P3_ID"
+       ,"Item":"P8_ID"
       }
     }
   ]
  ,"Dynamic Actions":[
     {
-      "id":"67715435042147936265"
+      "id":"68562479406450751151"
      ,"Identification":{
         "Name":"Cancel Dialog"
       }
@@ -532,7 +449,7 @@
      ,"When":{
         "Event":"EVENT.EVENT.BROWSER.CLICK"
        ,"Selection Type":"Button"
-       ,"Button":"CANCEL (67715434948004936265)"
+       ,"Button":"CANCEL (68562479345624751151)"
       }
      ,"Execution":{
         "Event Scope":"Static"
@@ -540,13 +457,13 @@
       }
      ,"Actions":[
         {
-          "id":"67715435861793936266"
+          "id":"68562480249785751152"
          ,"Identification":{
             "Action":"Cancelar Caixa de Di\u00E1logo"
           }
          ,"Execution":{
             "Sequence":10
-           ,"Event":"Cancel Dialog (67715435042147936265)"
+           ,"Event":"Cancel Dialog (68562479406450751151)"
            ,"Fire When Event Result Is":"True"
            ,"Fire on Initialization":false
           }
@@ -556,11 +473,40 @@
   ]
  ,"Processes":[
     {
-      "id":"67715437571251936267"
+      "id":"68501091225563207822"
      ,"Identification":{
-        "Name":"Inicializar o form TIPO DE ASSUNTO - FORM"
+        "Name":"Criar usu\u00E1rio no APEX"
+       ,"Type":"Executar C\u00F3digo"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Language":"PL\/SQL"
+       ,"PL\/SQL Code":"BEGIN\n    APEX_UTIL.CREATE_USER(\n        p_user_name                     =\u003E :P8_LOGIN,\n        p_email_address                 =\u003E :P8_EMAIL,\n        p_web_password                  =\u003E :P8_SENHA,\n        p_default_schema                =\u003E \u0027WKSP_ARESENDE\u0027,\n        p_change_password_on_first_use  =\u003E \u0027N\u0027);\nEND;"
+      }
+     ,"Execution":{
+        "Sequence":20
+       ,"Point":"Processing"
+       ,"Run Process":"Once Per Page Visit (default)"
+      }
+     ,"Error":{
+        "Display Location":"Inline in Notification"
+      }
+     ,"Server-side Condition":{
+        "When Button Pressed":"SAVE (68562481178850751152)"
+       ,"Type":"Item = Value"
+       ,"Item":"P8_ATIVO"
+       ,"Value":"Y"
+      }
+     ,"Security":{
+        "Authorization Scheme":"Direitos de Administra\u00E7\u00E3o (67705046189535022626)"
+      }
+    }
+   ,{
+      "id":"68562481909249751153"
+     ,"Identification":{
+        "Name":"Inicializar o form USUARIO_SOLICITADO FORM"
        ,"Type":"Form - Inicializa\u00E7\u00E3o"
-       ,"Form Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
+       ,"Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
       }
      ,"Execution":{
         "Sequence":10
@@ -569,11 +515,11 @@
       }
     }
    ,{
-      "id":"67715437937758936267"
+      "id":"68562482388307751153"
      ,"Identification":{
-        "Name":"Processar o form TIPO DE ASSUNTO - FORM"
+        "Name":"Processar o form USUARIO_SOLICITADO FORM"
        ,"Type":"Form - Processamento Autom\u00E1tico de Linhas (DML)"
-       ,"Form Region":"TIPO DE ASSUNTO - FORM (67715432842202936260)"
+       ,"Form Region":"USUARIO_SOLICITADO FORM (68562475165555751144)"
       }
      ,"Settings":{
         "Tipo de Alvo":"Region Source"
@@ -591,13 +537,13 @@
       }
     }
    ,{
-      "id":"67715438396388936267"
+      "id":"68562482771487751154"
      ,"Identification":{
         "Name":"Fechar Caixa de Di\u00E1logo"
        ,"Type":"Fechar Caixa de Di\u00E1logo"
       }
      ,"Execution":{
-        "Sequence":50
+        "Sequence":30
        ,"Point":"Processing"
        ,"Run Process":"Once Per Page Visit (default)"
       }

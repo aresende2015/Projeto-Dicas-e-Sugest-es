@@ -402,7 +402,7 @@
       }
      ,"Source":{
         "Language":"PL\/SQL"
-       ,"PL\/SQL Function Body returning a CLOB":"declare\n    l_acl_scope varchar2(45);\nbegin\n    l_acl_scope := apex_app_setting.get_value( p_name =\u003E \u0027ACCESS_CONTROL_SCOPE\u0027 );\n\n    if l_acl_scope = \u0027ALL_USERS\u0027 then\n        return apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ALL_USERS\u0027);\n    elsif l_acl_scope = \u0027ACL_ONLY\u0027 then\n        return apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ACL_ONLY\u0027);\n    else\n        return apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ACL_VALUE_INVALID\u0027, l_acl_scope);\n    end if;\nend;"
+       ,"PL\/SQL Function Body returning a CLOB":"declare\n    l_acl_scope varchar2(45);\n    l_msg varchar2(2000);\nbegin\n    l_acl_scope := apex_app_setting.get_value( p_name =\u003E \u0027ACCESS_CONTROL_SCOPE\u0027 );\n\n    if l_acl_scope = \u0027ALL_USERS\u0027 then\n        l_msg := apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ALL_USERS\u0027); \n        --return apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ALL_USERS\u0027);\n    elsif l_acl_scope = \u0027ACL_ONLY\u0027 then\n        l_msg := apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ACL_ONLY\u0027);  \n        --return apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ACL_ONLY\u0027);\n    else\n        l_msg := apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ACL_VALUE_INVALID\u0027, l_acl_scope); \n        --return apex_lang.message(\u0027APEX.FEATURE.ACL.INFO.ACL_VALUE_INVALID\u0027, l_acl_scope);\n    end if;\n\n    select l_msg into :P10000_EXIBIR_MSG from dual;\n\nend;"
       }
      ,"Layout":{
         "Sequence":10
@@ -947,6 +947,65 @@
            ,"u-colors"
           ]
         }
+      }
+    }
+  ]
+ ,"Page Items":[
+    {
+      "id":"67757397174969816545"
+     ,"Identification":{
+        "Name":"P10000_EXIBIR_MSG"
+       ,"Type":"Somente Exibi\u00E7\u00E3o"
+      }
+     ,"Label":{
+        "Alignment":"Left"
+      }
+     ,"Settings":{
+        "Formato":"Plain Text"
+       ,"Com Base Em":"Item Value"
+       ,"Mostrar Quebras de Linha":false
+       ,"Enviar ao Submeter P\u00E1gina":false
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Region":"Informa\u00E7\u00F5es sobre ACL (67705239860935023947)"
+       ,"Position":"BODY"
+       ,"Alignment":"Left"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+       ,"Label Column Span":"Page Template Default"
+      }
+     ,"Appearance":{
+        "Template":"Hidden (67705013336490022559)"
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"margin-top-none"
+         ,"margin-bottom-none"
+         ,"margin-left-none"
+         ,"margin-right-none"
+        ]
+       ,"CSS Classes":[
+          "margin-sm"
+        ]
+      }
+     ,"Advanced":{
+        "Warn on Unsaved Changes":"Page Default"
+      }
+     ,"Source":{
+        "Type":"Null"
+       ,"Used":"Only when current value in session state is null"
+      }
+     ,"Session State":{
+        "Data Type":"VARCHAR2"
+       ,"Storage":"Per Session (Persistent)"
+      }
+     ,"Security":{
+        "Session State Protection":"Unrestricted"
+       ,"Store value encrypted in session state":true
+       ,"Restricted Characters":"All characters can be saved."
       }
     }
   ]

@@ -22,7 +22,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230401010032'
+,p_last_upd_yyyymmddhh24miss=>'20230402132619'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67758594390916478546)
@@ -32,9 +32,18 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_display_sequence=>10
 ,p_query_type=>'TABLE'
 ,p_query_table=>'TDOW_ASSUNTO'
-,p_query_where=>'RESTRITO = ''N'' OR (RESTRITO = ''Y'' AND USUARIO = :APP_USER)'
+,p_query_where=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'(RESTRITO = ''N'' OR (RESTRITO = ''Y'' AND USUARIO = :APP_USER))',
+'AND',
+'(USUARIO IN (SELECT DISTINCT USUARIO ',
+'                FROM TDOW_ASSUNTO ',
+'                WHERE :P4_MINHAS_CONTRIBUICOES = ''N''',
+'                   OR USUARIO = :APP_USER',
+'            )',
+')'))
 ,p_include_rowid_column=>false
 ,p_plug_source_type=>'NATIVE_IR'
+,p_ajax_items_to_submit=>'P4_MINHAS_CONTRIBUICOES'
 ,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
@@ -142,7 +151,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_identifier=>'H'
 ,p_column_label=>'Usuario'
 ,p_column_type=>'STRING'
-,p_use_as_row_header=>'N'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(67758596812047478552)
@@ -180,6 +189,7 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_report_alias=>'677588379'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
+,p_display_rows=>10
 ,p_report_columns=>'ID_TIPO_ASSUNTO:TITULO_ASSUNTO:RESTRITO:USUARIO:DATA_CRIACAO:'
 );
 wwv_flow_imp_page.create_page_plug(
@@ -210,6 +220,17 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_redirect_url=>'f?p=&APP_ID.:5:&SESSION.::&DEBUG.:5:P5_ACAO,P5_USUARIO,P5_ACAO_ORIGINAL:1,&APP_USER.,1'
 ,p_security_scheme=>wwv_flow_imp.id(67705046243333022626)
 );
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(68501091560991207825)
+,p_name=>'P4_MINHAS_CONTRIBUICOES'
+,p_item_sequence=>20
+,p_item_display_point=>'AFTER_LOGO'
+,p_prompt=>unistr('Somente minhas contribui\00E7\00F5es')
+,p_display_as=>'NATIVE_SINGLE_CHECKBOX'
+,p_field_template=>wwv_flow_imp.id(67705013698096022560)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'Y'
+);
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(67758597663108478553)
 ,p_name=>unistr('Editar Relat\00F3rio - Caixa de Di\00E1logo Fechada')
@@ -223,6 +244,26 @@ wwv_flow_imp_page.create_page_da_event(
 wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(67758598115196478553)
 ,p_event_id=>wwv_flow_imp.id(67758597663108478553)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(67758594390916478546)
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(68501091680538207826)
+,p_name=>'Novo'
+,p_event_sequence=>20
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P4_MINHAS_CONTRIBUICOES'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(68501091799403207827)
+,p_event_id=>wwv_flow_imp.id(68501091680538207826)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'

@@ -39,7 +39,7 @@ unistr('<p><em><strong>Observa\00E7\00E3o:</strong> Se voc\00EA usar as contas d
 ||'></p>'))
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'ALEX.Q.RESENDE@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230329225601'
+,p_last_upd_yyyymmddhh24miss=>'20230401181043'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(67705162856531023618)
